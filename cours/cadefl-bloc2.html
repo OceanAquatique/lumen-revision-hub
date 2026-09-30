@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8fbff">
+<meta name="description" content="CADEFL Bloc 2 — Modelling Standards for a CODIR · support de révision approfondi.">
+<title>CADEFL Bloc 2 · LUMEN</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+<a class="brand" href="../index.html">
+<svg viewBox="0 0 48 54" fill="none" aria-label="LUMEN"><path d="M24 2 46 18 36 48 24 38 12 48 2 18 24 2Z" fill="#eef6ff" stroke="#6c64f4"/><path d="M24 2 24 38 2 18 24 2Z" fill="#48b4ff"/><path d="M24 2 46 18 24 38V2Z" fill="#9f5cf5"/><path d="m2 18 22 20-12 10L2 18Z" fill="#31dce9"/><path d="m46 18-22 20 12 10 10-30Z" fill="#7154fa"/></svg>
+<span>LUMEN<small>CADEFL · BLOC 2</small></span></a>
+<button class="btn mobile-menu" data-menu>☰ Menu</button>
+<div class="nav-label">Bloc 2</div>
+<nav class="nav course-nav">
+<a href="#mission">✦ Mission</a>
+<a href="#notations">◈ 3 notations</a>
+<a href="#archimate">▦ ArchiMate</a>
+<a href="#medlink-archi">⬡ MedLink · Archi</a>
+<a href="#bpmn">◇ BPMN raffiné</a>
+<a href="#debug">⌘ Debug BPMN</a>
+<a href="#codir">◎ CODIR-ready</a>
+<a href="#governance">▤ Gouvernance</a>
+<a href="#d2">⇢ Livrable D2</a>
+<a href="#flashcards">◇ Flashcards</a>
+<a href="#quiz">☑ QCM</a>
+<a href="#memo">◴ Mémo express</a>
+</nav>
+<div class="reading"><div class="reading-head"><span>Progression</span><span>lecture</span></div><div class="progress"><span id="reading-progress"></span></div></div>
+<div class="side-note"><a href="cadefl-bloc1.html">← Bloc 1</a><br><a href="../index.html">⌂ Retour à LUMEN</a></div>
+</aside>
+
+<div class="content">
+<header class="topbar"><span class="label">CADEFL · Modelling Standards for a CODIR</span><span class="tag">Bloc 02</span></header>
+<main class="wrapper">
+<section class="hero course-hero">
+<div class="eyebrow">CADEFL · Bloc 02</div>
+<h1>De la cartographie<br><span class="gradient">à la vue CODIR.</span></h1>
+<p>ArchiMate pour la structure, BPMN raffiné pour l'ownership et les handoffs, vocabulaire de gouvernance pour la crédibilité — avec un principe directeur : une carte utile au board doit expliquer le système sans obliger un ingénieur à la traduire.</p>
+<div class="chips"><span class="chip">ArchiMate</span><span class="chip">Business / Application / Technology</span><span class="chip">Pools & Lanes</span><span class="chip">Message Flow</span><span class="chip">CODIR</span><span class="chip">COBIT · ITIL · TOGAF</span><span class="chip">D2</span></div>
+</section>
+
+<section id="mission" class="lesson">
+<span class="source-badge">Support CADEFL · Bloc 2</span>
+<h2>01 — Pourquoi un Bloc 2 ?</h2>
+<p class="lead">À la fin du Bloc 1, tu sais déjà décrire le flux : layer map légère, DFD de la soumission d'un claim et BPMN du processus d'approbation. Mais le cours pose un problème de gouvernance : <strong>un diagramme de processus seul n'explique pas comment métier, applications et technologie s'emboîtent.</strong></p>
+<div class="grid4">
+<div class="mini"><strong>Model</strong><p>Produire une vue ArchiMate couvrant Business, Application et Technology.</p></div>
+<div class="mini"><strong>Refine</strong><p>Transformer le BPMN du Bloc 1 en modèle à responsabilités explicites.</p></div>
+<div class="mini"><strong>Label</strong><p>Utiliser COBIT, ITIL et TOGAF comme vocabulaire d'annotation, sans refaire INLAGO.</p></div>
+<div class="mini"><strong>Present</strong><p>Construire une carte compréhensible par un CODIR sans traduction technique.</p></div>
+</div>
+<div class="callout"><strong>Le changement de perspective :</strong> le Bloc 1 répond surtout « comment le SI fonctionne-t-il ? ». Le Bloc 2 ajoute « comment représenter cette réalité pour qu'un décideur voie la structure, les responsabilités et les points de passage critiques ? »</div>
+</section>
+
+<section id="notations" class="lesson">
+<span class="source-badge">Support CADEFL · concept central</span>
+<h2>02 — DFD, BPMN, ArchiMate : trois questions différentes</h2>
+<table><thead><tr><th>Notation</th><th>Angle</th><th>Question du cours</th><th>Ce qu'elle rend visible</th></tr></thead><tbody>
+<tr><td><strong>DFD</strong></td><td>DATA</td><td>Where does information move and rest?</td><td>Circulation, transformations et stockage de la donnée.</td></tr>
+<tr><td><strong>BPMN</strong></td><td>PROCESS</td><td>Who acts, in what order?</td><td>Activités, séquence, décisions, responsabilités et échanges.</td></tr>
+<tr><td><strong>ArchiMate</strong></td><td>STRUCTURE</td><td>How do business, application and technology fit together?</td><td>Architecture transversale et liens entre couches.</td></tr>
+</tbody></table>
+<div class="callout warn"><strong>Piège classique :</strong> ces notations ne se remplacent pas. Elles donnent des vues complémentaires du même SI. Le Bloc 2 ajoute ArchiMate parce que ni le DFD ni le BPMN ne suffisent à montrer la structure Business → Application → Technology sur une seule vue.</div>
+</section>
+
+<section id="archimate" class="lesson">
+<span class="source-badge">Support CADEFL · ArchiMate</span>
+<h2>03 — ArchiMate : la grille de lecture</h2>
+<p class="lead">Le support réduit volontairement l'apprentissage à deux axes simples : <strong>3 layers</strong> pour savoir où placer un élément et <strong>3 shape families</strong> pour savoir quel rôle conceptuel il joue.</p>
+<h3>A. Les trois couches</h3>
+<div class="grid3">
+<div class="mini"><strong>Business</strong><p>Ce qui relève du métier : acteurs/rôles, comportements et objets métier.</p></div>
+<div class="mini"><strong>Application</strong><p>Les composants et services applicatifs qui supportent le métier.</p></div>
+<div class="mini"><strong>Technology</strong><p>Les nœuds et infrastructures qui supportent les applications.</p></div>
+</div>
+<h3>B. Les trois familles</h3>
+<table><thead><tr><th>Famille</th><th>Question</th><th>Exemples explicitement donnés</th></tr></thead><tbody>
+<tr><td><strong>Active structure</strong></td><td>Who / what performs behaviour?</td><td>Actor · role · component · node</td></tr>
+<tr><td><strong>Behaviour</strong></td><td>What happens?</td><td>Process · function · service</td></tr>
+<tr><td><strong>Passive structure</strong></td><td>What is acted upon?</td><td>Business object · data object</td></tr>
+</tbody></table>
+<div class="callout"><strong>Technique de classement :</strong> commence par demander « quelle couche ? », puis « actif, comportement ou passif ? ». Le support insiste : la position exacte dans le dessin peut se discuter ; la couche conceptuelle, elle, doit être justifiable.</div>
+<h3>C. Realisation : donner du sens entre les couches</h3>
+<p>Le challenge demande de tracer les relations de <strong>realisation</strong> entre les couches. L'objectif pédagogique est de ne pas produire trois inventaires horizontaux indépendants : la vue doit montrer comment les éléments d'une couche permettent ou réalisent ceux d'une autre.</p>
+<div class="flow"><div class="node"><strong>Business</strong><br>capacité / comportement métier</div><div class="arrow">↕</div><div class="node"><strong>Application</strong><br>support applicatif</div><div class="arrow">↕</div><div class="node"><strong>Technology</strong><br>support technique</div></div>
+</section>
+
+<section id="medlink-archi" class="lesson">
+<span class="source-badge">MedLink · exercice du Bloc 2</span>
+<h2>04 — Les 12 pièces MedLink</h2>
+<p>Le cours donne douze éléments à classer. Il signale lui-même deux nuances importantes : <strong>Claim Data</strong> est de la passive structure et <strong>Handle Member Claim</strong> du behaviour. Autrement dit, « layer » et « shape family » sont deux axes à ne pas confondre.</p>
+<div class="grid3">
+<div class="mini"><strong>Business</strong><p><b>Claims Adjuster</b> · <b>Cloud Squad Lead</b> · <b>Handle Member Claim</b> · <b>Claim Data (record)</b> selon la nature métier retenue dans l'exercice.</p></div>
+<div class="mini"><strong>Application</strong><p><b>Claims API</b> · <b>Provider Portal</b> · <b>Auto-Scoring Service</b> · <b>Member Registry</b> · <b>Policy Ledger</b>.</p></div>
+<div class="mini"><strong>Technology</strong><p><b>Mainframe</b> · <b>Cloud Cluster</b> · <b>Legacy Batch Job</b>, avec une attention particulière à la distinction infrastructure/comportement technique.</p></div>
+</div>
+<div class="callout warn"><strong>Important pour réviser :</strong> le support fournit la liste et demande aux équipes de la classer, mais l'extrait textuel ne donne pas une table de correction exhaustive élément par élément. Les regroupements ci-dessus servent de grille de travail ; retiens surtout la méthode de justification et les catégories explicitement enseignées.</div>
+<details><summary>Questions à te poser pour chaque élément</summary><p>Est-ce un acteur/rôle métier ? Une application ou un service applicatif ? Un nœud/infrastructure ? Est-ce quelque chose qui agit, quelque chose qui se produit, ou quelque chose sur lequel on agit ? Quelle relation permet de remonter ou descendre vers une autre couche ?</p></details>
+</section>
+
+<section id="bpmn" class="lesson">
+<span class="source-badge">Support CADEFL · BPMN refinement</span>
+<h2>05 — BPMN raffiné : rendre l'ownership visible</h2>
+<h3>Pools vs lanes</h3>
+<div class="grid2">
+<div class="mini"><strong>Pool</strong><p>Le support pose la règle de travail : un pool par organisation. Dans MedLink, Cloud et Legacy obtiennent chacun leur pool pour rendre l'ownership visible immédiatement.</p></div>
+<div class="mini"><strong>Lane</strong><p>Une lane représente un rôle ou système à l'intérieur d'un pool lorsque les participants restent dans la même organisation.</p></div>
+</div>
+<h3>Trois éléments à maîtriser</h3>
+<div class="grid3">
+<div class="mini"><strong>Parallel Gateway</strong><p>Deux branches s'exécutent simultanément ; les deux doivent terminer avant de continuer. Losange avec « + ».</p></div>
+<div class="mini"><strong>Message Flow</strong><p>Flèche en pointillés entre pools : information qui traverse une frontière organisationnelle, distincte d'un sequence flow.</p></div>
+<div class="mini"><strong>Sub-process</strong><p>Boîte repliée avec petit « + » : cache le détail inutile au board, tout en permettant de le développer dans une annexe technique.</p></div>
+</div>
+<h3>Le modèle MedLink raffiné</h3>
+<div class="flow"><div class="node"><strong>Pool Cloud</strong><br>Submit & Auto-score → Auto-approve & notify</div><div class="arrow">- - - →</div><div class="node"><strong>Pool Legacy</strong><br>Manual Review → Update Ledger</div></div>
+<div class="callout case"><strong>Ce qui change par rapport au Bloc 1 :</strong> deux pools au lieu de responsabilités mélangées ; un message flow marque précisément le handoff Cloud → Legacy ; pour le board, les noms des pools et le point de passage sont plus importants que chaque étape interne.</div>
+</section>
+
+<section id="debug" class="lesson">
+<span class="source-badge">Exhibit A · exercice de debug</span>
+<h2>06 — Savoir reconnaître un mauvais BPMN</h2>
+<p>Le cours présente volontairement un diagramme de junior analyst avec au moins cinq problèmes. Les indices fournis sont eux-mêmes une checklist de revue.</p>
+<div class="grid2">
+<div class="mini"><strong>1 · Tout dans une seule lane</strong><p>« MedLink (everything, one lane) » masque la séparation Cloud/Legacy et donc l'ownership recherché.</p></div>
+<div class="mini"><strong>2 · Mauvais type de flux</strong><p>Un sequence flow traverse vers Legacy alors que le cours attend un message flow entre les deux pools.</p></div>
+<div class="mini"><strong>3 · Gateway sans raison</strong><p>Un parallel gateway est placé alors qu'il n'y a rien à paralléliser : un symbole doit « mériter sa place ».</p></div>
+<div class="mini"><strong>4 · Labels trop techniques</strong><p><code>Invoke REST endpoint /v2/score</code> ou <code>PL/I batch routine CLM_VALIDATE_v4.2</code> sont des détails inadaptés à un board pack.</p></div>
+</div>
+<div class="callout warn"><strong>5e problème à rechercher :</strong> le support indique également « Update ledger (no handoff shown) ». Le diagramme échoue donc à rendre explicitement visible le passage critique vers Legacy, précisément ce que le CODIR doit comprendre.</div>
+<h3>Checklist de debug issue du cours</h3>
+<ul><li>Les organisations sont-elles correctement regroupées ?</li><li>Chaque flèche est-elle du bon type — solide ou pointillée ?</li><li>Chaque gateway a-t-elle une vraie fonction ?</li><li>Chaque label serait-il compris par un CODIR ?</li><li>Le handoff critique est-il visible ?</li></ul>
+</section>
+
+<section id="codir" class="lesson">
+<span class="source-badge">Support CADEFL · CODIR Test</span>
+<h2>07 — Concevoir pour un CODIR</h2>
+<p class="lead">Le message du cours est volontairement brutal : une documentation peut être techniquement exacte et pourtant être inutilisable pour décider.</p>
+<div class="callout case"><strong>Feedback du board :</strong> il ne veut pas une architecture technique exhaustive. Il veut savoir <strong>qui possède quoi</strong> et <strong>où sont les handoffs critiques</strong>.</div>
+<h3>Le test des 20 secondes</h3>
+<p>Le support affiche volontairement des détails comme <code>claim_id VARCHAR(24) PK</code>, <code>AUTH_SVC.validate(token)</code>, une fenêtre CRON, un événement API ou un dataset mainframe, puis demande : qu'a réellement compris le CIO ? La leçon n'est pas que ces données sont inutiles, mais qu'elles ne répondent pas à la question du board.</p>
+<h3>Le filtre de simplification</h3>
+<div class="flow"><div class="node"><strong>1</strong><br>Réécrire tout label que le CODIR ne reconnaîtrait pas</div><div class="arrow">→</div><div class="node"><strong>2</strong><br>Couper ce qui ne change pas une décision du board</div><div class="arrow">→</div><div class="node"><strong>3</strong><br>Garder : what is it? who owns it? why does it matter?</div></div>
+<div class="callout"><strong>Principe-clé du Bloc 2 :</strong> la qualité d'une vue CODIR dépend aussi de ce qu'elle <em>retire</em>. La dernière slide le formule explicitement : « A CODIR judges your map on what it cuts, not what it includes. »</div>
+</section>
+
+<section id="governance" class="lesson">
+<span class="source-badge">Support CADEFL · Light Touch</span>
+<h2>08 — Labels de gouvernance : juste assez</h2>
+<p>Le Bloc 2 ne réenseigne pas COBIT, ITIL ou TOGAF. Le support dit explicitement que la profondeur appartient à INLAGO ; ici, ces référentiels deviennent des <strong>annotations sur la carte</strong>.</p>
+<table><thead><tr><th>Exemple du cours</th><th>Label</th><th>Ce que la carte communique</th></tr></thead><tbody>
+<tr><td>Legacy Batch Job</td><td><strong>ITIL-run</strong></td><td>Le changement passe par un CAB.</td></tr>
+<tr><td>Claims API</td><td><strong>DevOps-run</strong></td><td>Pas de formal change gate à ce stade.</td></tr>
+<tr><td>Mainframe node</td><td><strong>COBIT · APO03</strong></td><td>L'objectif d'architecture s'applique.</td></tr>
+<tr><td>Enterprise architecture framework</td><td><strong>TOGAF</strong></td><td>Framework global d'architecture d'entreprise dans le rapid-fire.</td></tr>
+</tbody></table>
+<div class="callout warn"><strong>À ne pas faire :</strong> transformer la carte en cours de frameworks. Le livrable demande seulement <strong>2 à 3 tags de vocabulaire de gouvernance</strong> sur les éléments pertinents.</div>
+</section>
+
+<section id="d2" class="lesson">
+<span class="source-badge">Project Increment · D2</span>
+<h2>09 — Ce que tu dois produire</h2>
+<p>Tout ce qui est construit pendant le Bloc 2 devient un package propre. Une contrainte est explicite : <strong>chaque élément doit tracer vers quelque chose déjà présent dans la carte du Bloc 1 — aucun nouveau scope.</strong></p>
+<div class="grid3">
+<div class="mini"><strong>1 · ArchiMate View</strong><p>Business / Application / Technology pour la claims capability, avec realisation links.</p></div>
+<div class="mini"><strong>2 · Refined BPMN</strong><p>Deux pools et un message flow marquant le handoff legacy/cloud.</p></div>
+<div class="mini"><strong>3 · Vocabulary Labels</strong><p>2–3 éléments annotés avec le framework de gouvernance associé.</p></div>
+</div>
+<div class="callout"><strong>Format :</strong> un fichier source <code>.drawio</code> + un PDF exporté, soumis par équipe, attendu au début du Bloc 3. Il s'agit de la deuxième section du dossier.</div>
+<h3>Tooling</h3>
+<p><strong>draw.io</strong> reste l'outil principal : bibliothèque ArchiMate via la recherche « ArchiMate », et bibliothèque BPMN déjà utilisée au Bloc 1. <strong>Archi</strong>, modeleur ArchiMate gratuit de The Open Group, est présenté comme optionnel et non requis.</p>
+<h3>Pitch CODIR</h3>
+<p>Le cours termine par un pitch de <strong>90 secondes</strong>. Les questions proposées par le board sont révélatrices : « What would break first if legacy went down for a day? », « Who do I call if this map is wrong? », « Why should I trust this over the last one? ». La carte doit donc soutenir une conversation de responsabilité, de dépendance et de confiance — pas seulement prouver que le diagramme est syntaxiquement correct.</p>
+</section>
+
+<section id="flashcards" class="lesson">
+<span class="source-badge">Révision active</span>
+<h2>10 — Flashcards</h2>
+<details><summary>Pourquoi ArchiMate est-il ajouté au Bloc 2 ?</summary><p>Pour montrer comment Business, Application et Technology s'articulent ; DFD et BPMN répondent à d'autres questions.</p></details>
+<details><summary>Les 3 layers ArchiMate ?</summary><p>Business, Application, Technology.</p></details>
+<details><summary>Les 3 shape families ?</summary><p>Active structure, Behaviour, Passive structure.</p></details>
+<details><summary>Active structure = ?</summary><p>Who/what performs behaviour : actor, role, component, node.</p></details>
+<details><summary>Behaviour = ?</summary><p>What happens : process, function, service.</p></details>
+<details><summary>Passive structure = ?</summary><p>What is acted upon : business object, data object.</p></details>
+<details><summary>Pool vs lane ?</summary><p>Pool : organisation/participant distinct dans le modèle du cours. Lane : rôle ou système à l'intérieur d'un pool.</p></details>
+<details><summary>Message flow ?</summary><p>Flèche pointillée entre pools pour une information traversant une frontière organisationnelle.</p></details>
+<details><summary>Parallel gateway ?</summary><p>Deux branches simultanées ; toutes deux doivent terminer avant de continuer.</p></details>
+<details><summary>Pourquoi un sub-process ?</summary><p>Masquer le détail dont le board n'a pas besoin tout en le conservant développable pour l'annexe technique.</p></details>
+<details><summary>Le filtre CODIR en 3 questions ?</summary><p>What is it? Who owns it? Why does it matter?</p></details>
+<details><summary>CAB → quel framework dans l'exemple ?</summary><p>ITIL.</p></details>
+<details><summary>APO03 → quel framework ?</summary><p>COBIT.</p></details>
+<details><summary>Overall enterprise architecture framework ?</summary><p>TOGAF, dans le rapid-fire du support.</p></details>
+<details><summary>Contenu de D2 ?</summary><p>ArchiMate View + Refined BPMN + 2–3 Vocabulary Labels.</p></details>
+<details><summary>Contrainte de scope D2 ?</summary><p>Tout doit tracer vers le Bloc 1 ; pas de nouveau scope.</p></details>
+</section>
+
+<section id="quiz" class="lesson" data-quiz>
+<span class="source-badge">Entraînement construit à partir du Bloc 2</span>
+<h2>11 — QCM · 15 questions</h2>
+<p class="lead">Questions de révision dérivées des notions explicitement présentes dans le support. Clique sur « Corriger » pour afficher le score et les explications.</p>
+<div class="quiz-card" data-answer="B"><h3>1. Quel est l&#x27;objectif principal du Bloc 2 ?</h3><label class="option"><input type="radio" name="q1" value="A"> Reconstituer une CMDB complète</label><label class="option"><input type="radio" name="q1" value="B"> Produire une cartographie lisible par un CODIR</label><label class="option"><input type="radio" name="q1" value="C"> Faire un audit RGPD</label><label class="option"><input type="radio" name="q1" value="D"> Documenter chaque API</label><div class="feedback">Réponse : B — Le Bloc 2 transforme les modèles du Bloc 1 en vues structurées et présentables à un CODIR.</div></div><div class="quiz-card" data-answer="C"><h3>2. Quelle notation répond surtout à « comment Business, Application et Technology s&#x27;articulent-ils ? »</h3><label class="option"><input type="radio" name="q2" value="A"> DFD</label><label class="option"><input type="radio" name="q2" value="B"> BPMN</label><label class="option"><input type="radio" name="q2" value="C"> ArchiMate</label><label class="option"><input type="radio" name="q2" value="D"> UML</label><div class="feedback">Réponse : C — Le support associe DFD aux données, BPMN au processus et ArchiMate à la structure.</div></div><div class="quiz-card" data-answer="B"><h3>3. Quelles sont les trois couches ArchiMate utilisées dans le cours ?</h3><label class="option"><input type="radio" name="q3" value="A"> People / Process / Technology</label><label class="option"><input type="radio" name="q3" value="B"> Business / Application / Technology</label><label class="option"><input type="radio" name="q3" value="C"> Strategy / Data / Network</label><label class="option"><input type="radio" name="q3" value="D"> Business / Data / Security</label><div class="feedback">Réponse : B — Business, Application et Technology.</div></div><div class="quiz-card" data-answer="A"><h3>4. En ArchiMate, « who/what performs behaviour » correspond à...</h3><label class="option"><input type="radio" name="q4" value="A"> Active structure</label><label class="option"><input type="radio" name="q4" value="B"> Behaviour</label><label class="option"><input type="radio" name="q4" value="C"> Passive structure</label><label class="option"><input type="radio" name="q4" value="D"> Message flow</label><div class="feedback">Réponse : A — Active structure : actor, role, component, node.</div></div><div class="quiz-card" data-answer="C"><h3>5. En ArchiMate, un business object ou data object appartient à...</h3><label class="option"><input type="radio" name="q5" value="A"> Active structure</label><label class="option"><input type="radio" name="q5" value="B"> Behaviour</label><label class="option"><input type="radio" name="q5" value="C"> Passive structure</label><label class="option"><input type="radio" name="q5" value="D"> Technology uniquement</label><div class="feedback">Réponse : C — Passive structure = ce sur quoi l&#x27;action porte.</div></div><div class="quiz-card" data-answer="C"><h3>6. Dans le challenge MedLink, lequel est clairement un élément Technology ?</h3><label class="option"><input type="radio" name="q6" value="A"> Claims Adjuster</label><label class="option"><input type="radio" name="q6" value="B"> Claims API</label><label class="option"><input type="radio" name="q6" value="C"> Mainframe</label><label class="option"><input type="radio" name="q6" value="D"> Handle Member Claim</label><div class="feedback">Réponse : C — Le Mainframe relève de la couche Technology.</div></div><div class="quiz-card" data-answer="B"><h3>7. Pourquoi le Bloc 2 affine-t-il le BPMN avec deux pools ?</h3><label class="option"><input type="radio" name="q7" value="A"> Pour afficher davantage de détails techniques</label><label class="option"><input type="radio" name="q7" value="B"> Pour rendre la frontière de responsabilité cloud/legacy immédiatement visible</label><label class="option"><input type="radio" name="q7" value="C"> Parce qu&#x27;une lane est interdite</label><label class="option"><input type="radio" name="q7" value="D"> Pour supprimer les message flows</label><div class="feedback">Réponse : B — Le support veut rendre l&#x27;ownership et le handoff cloud/legacy visibles d&#x27;un coup d&#x27;œil.</div></div><div class="quiz-card" data-answer="B"><h3>8. À quoi sert un message flow dans le modèle présenté ?</h3><label class="option"><input type="radio" name="q8" value="A"> À ordonner les tâches dans un même processus</label><label class="option"><input type="radio" name="q8" value="B"> À montrer une communication entre pools</label><label class="option"><input type="radio" name="q8" value="C"> À stocker des données</label><label class="option"><input type="radio" name="q8" value="D"> À représenter un serveur</label><div class="feedback">Réponse : B — Le support le décrit comme une flèche en pointillés entre pools.</div></div><div class="quiz-card" data-answer="B"><h3>9. Que signifie le parallel gateway présenté dans le cours ?</h3><label class="option"><input type="radio" name="q9" value="A"> Une seule branche est choisie</label><label class="option"><input type="radio" name="q9" value="B"> Deux branches s&#x27;exécutent simultanément et doivent toutes deux finir avant la suite</label><label class="option"><input type="radio" name="q9" value="C"> Le processus s&#x27;arrête</label><label class="option"><input type="radio" name="q9" value="D"> Un message traverse une organisation</label><div class="feedback">Réponse : B — C&#x27;est la définition donnée dans le support.</div></div><div class="quiz-card" data-answer="B"><h3>10. Pourquoi utiliser un sub-process dans une vue CODIR ?</h3><label class="option"><input type="radio" name="q10" value="A"> Pour cacher définitivement le processus</label><label class="option"><input type="radio" name="q10" value="B"> Pour masquer le détail inutile au board tout en le gardant développable ailleurs</label><label class="option"><input type="radio" name="q10" value="C"> Pour remplacer les pools</label><label class="option"><input type="radio" name="q10" value="D"> Pour dessiner une base de données</label><div class="feedback">Réponse : B — Le support le présente comme un moyen de cacher le détail que le board n&#x27;a pas besoin de voir.</div></div><div class="quiz-card" data-answer="B"><h3>11. Quel test de simplification le support propose-t-il ?</h3><label class="option"><input type="radio" name="q11" value="A"> Conserver tout ce qui est techniquement exact</label><label class="option"><input type="radio" name="q11" value="B"> Garder ce qui répond à : what is it, who owns it, why does it matter</label><label class="option"><input type="radio" name="q11" value="C"> Supprimer les propriétaires</label><label class="option"><input type="radio" name="q11" value="D"> Afficher les noms de tables</label><div class="feedback">Réponse : B — C&#x27;est le filtre CODIR explicitement donné.</div></div><div class="quiz-card" data-answer="C"><h3>12. Quel framework est associé au CAB dans les exemples de labels ?</h3><label class="option"><input type="radio" name="q12" value="A"> COBIT</label><label class="option"><input type="radio" name="q12" value="B"> TOGAF</label><label class="option"><input type="radio" name="q12" value="C"> ITIL</label><label class="option"><input type="radio" name="q12" value="D"> BPMN</label><div class="feedback">Réponse : C — Le support : Legacy Batch Job — ITIL-run — change goes through a CAB.</div></div><div class="quiz-card" data-answer="B"><h3>13. Quel framework est associé à APO03 dans le support ?</h3><label class="option"><input type="radio" name="q13" value="A"> ITIL</label><label class="option"><input type="radio" name="q13" value="B"> COBIT</label><label class="option"><input type="radio" name="q13" value="C"> TOGAF</label><label class="option"><input type="radio" name="q13" value="D"> ArchiMate</label><div class="feedback">Réponse : B — Le support rattache APO03 (architecture) à COBIT.</div></div><div class="quiz-card" data-answer="C"><h3>14. Quel framework est présenté comme l&#x27;overall enterprise architecture framework ?</h3><label class="option"><input type="radio" name="q14" value="A"> COBIT</label><label class="option"><input type="radio" name="q14" value="B"> ITIL</label><label class="option"><input type="radio" name="q14" value="C"> TOGAF</label><label class="option"><input type="radio" name="q14" value="D"> BPMN</label><div class="feedback">Réponse : C — Le rapid-fire du cours donne TOGAF.</div></div><div class="quiz-card" data-answer="A"><h3>15. Que contient l&#x27;incrément D2 du Bloc 2 ?</h3><label class="option"><input type="radio" name="q15" value="A"> ArchiMate view + refined BPMN + vocabulary labels</label><label class="option"><input type="radio" name="q15" value="B"> DFD Level 0 + CMDB + audit</label><label class="option"><input type="radio" name="q15" value="C"> CMDB + risk register</label><label class="option"><input type="radio" name="q15" value="D"> PSSI + PRA + BPMN</label><div class="feedback">Réponse : A — Le projet ajoute une vue ArchiMate, un BPMN raffiné et 2–3 labels de gouvernance.</div></div>
+<div class="actions"><button class="btn primary check">Corriger</button><button class="btn reset">Réinitialiser</button></div>
+<div class="score"></div>
+</section>
+
+<section id="memo" class="lesson">
+<span class="source-badge">Bloc 2 · Key Takeaways</span>
+<h2>12 — Mémo express avant quiz</h2>
+<div class="grid2">
+<div><h3>Architecture</h3><ul>
+<li>DFD = data ; BPMN = process ; ArchiMate = structure.</li>
+<li>ArchiMate : Business / Application / Technology.</li>
+<li>Familles : Active structure / Behaviour / Passive structure.</li>
+<li>Une vue utile relie les couches ; elle ne juxtapose pas trois inventaires.</li>
+<li>Le board veut ownership + critical handoffs.</li>
+</ul></div>
+<div><h3>BPMN & gouvernance</h3><ul>
+<li>Cloud et Legacy : deux pools dans le modèle raffiné.</li>
+<li>Message flow = pointillé entre pools.</li>
+<li>Parallel gateway = branches simultanées.</li>
+<li>ITIL → CAB ; COBIT → APO03 ; TOGAF → enterprise architecture.</li>
+<li>D2 = ArchiMate + refined BPMN + 2–3 labels ; aucun nouveau scope.</li>
+</ul></div>
+</div>
+<div class="callout case"><strong>Transition vers le Bloc 3 :</strong> la carte montre maintenant la structure. La question ouverte du support devient : quels sont les actifs critiques, et existe-t-il seulement un registre pour les gérer ? Le Bloc 3 construira un registre de type CMDB à partir de ce qui a déjà été cartographié.</div>
+</section>
+
+<footer class="footer">◈ LUMEN · CADEFL Bloc 2 · Support étudiant indépendant</footer>
+</main></div></div></body></html>
