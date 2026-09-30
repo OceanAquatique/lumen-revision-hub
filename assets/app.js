@@ -1,0 +1,7 @@
+
+const sidebar=document.getElementById('sidebar');
+document.querySelectorAll('[data-menu]').forEach(b=>b.addEventListener('click',()=>sidebar?.classList.toggle('open')));
+const sections=[...document.querySelectorAll('.lesson[id]')], links=[...document.querySelectorAll('.course-nav a')], bar=document.getElementById('reading-progress');
+function update(){const d=document.documentElement;if(bar){const den=d.scrollHeight-d.clientHeight;bar.style.width=(den?Math.min(100,Math.max(0,d.scrollTop/den*100)):0)+'%'}let cur=sections[0]?.id;for(const s of sections)if(s.getBoundingClientRect().top<150)cur=s.id;links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur))}
+addEventListener('scroll',update,{passive:true});update();
+document.querySelectorAll('[data-quiz]').forEach(q=>{const cards=[...q.querySelectorAll('.quiz-card')],score=q.querySelector('.score');q.querySelector('.check')?.addEventListener('click',()=>{let ok=0,ans=0;cards.forEach(c=>{c.classList.remove('correct','wrong');const x=c.querySelector('input:checked');if(!x)return;ans++;const good=x.value===c.dataset.answer;c.classList.add(good?'correct':'wrong');if(good)ok++});score.textContent=`Score : ${ok}/${cards.length}${ans<cards.length?` · ${cards.length-ans} sans réponse`:''}`});q.querySelector('.reset')?.addEventListener('click',()=>{q.querySelectorAll('input').forEach(i=>i.checked=false);cards.forEach(c=>c.classList.remove('correct','wrong'));score.textContent=''})});
