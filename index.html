@@ -1,6 +1,148 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8fbff"><meta name="description" content="Portail indépendant de révision collaborative — cours et exercices interactifs, par et pour les étudiants."><title>LUMEN · Revision Hub | EPITA</title><link rel="stylesheet" href="assets/style.css"><script defer src="assets/app.js"></script></head><body><div class="shell">
-<aside class="sidebar" id="sidebar"><a class="brand" href="index.html"><svg viewBox="0 0 48 54" fill="none"><path d="M24 2 46 18 36 48 24 38 12 48 2 18 24 2Z" fill="#eef6ff" stroke="#6c64f4"/><path d="M24 2 24 38 2 18 24 2Z" fill="#48b4ff"/><path d="M24 2 46 18 24 38V2Z" fill="#9f5cf5"/><path d="m2 18 22 20-12 10L2 18Z" fill="#31dce9"/><path d="m46 18-22 20 12 10 10-30Z" fill="#7154fa"/></svg><span>LUMEN<small>REVISION HUB · EPITA</small></span></a><button class="btn mobile-menu" data-menu>☰ Menu</button><div class="nav-label">Plateforme</div><nav class="nav"><a class="active" href="index.html">⌂ Accueil</a><a href="#modules">◈ Mes modules</a><a href="cours/cadefl-bloc1.html#quiz">☑ QCM</a><a href="cours/cadefl-bloc1.html#flashcards">◇ Flashcards</a><a href="cours/cadefl-bloc1.html#medlink">⬡ Cas pratique</a><a href="#sources">▤ Sources & transparence</a></nav><div class="side-note"><b>✦ Apprendre, vraiment.</b><br>Le diplôme, c'est bien. Comprendre ce qu'on raconte, c'est mieux.<br><br><small>Projet étudiant indépendant, non officiel.</small></div></aside>
-<div class="content"><header class="topbar"><span class="label">Plateforme de révision collaborative</span><span class="tag">✧ Version pilote · CADEFL</span></header><main class="wrapper"><section class="hero"><div class="eyebrow">✦ Une idée d'Océane, ouverte à la promo</div><h1>Comprendre.<br><span class="gradient">Relier. Maîtriser.</span></h1><p>Un espace pour transformer les cours en vraie compréhension : notions approfondies, révision active et cas concrets.</p><div class="actions"><a class="btn primary" href="cours/cadefl-bloc1.html">▶ Commencer à réviser →</a><a class="btn" href="#modules">Explorer les matières ↗</a></div><div class="hero-art" aria-hidden="true"><div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div><span class="prism">◈</span></div></section>
-<div class="stats"><div class="stat"><b>01</b><span>module publié</span></div><div class="stat"><b>04</b><span>documents analysés</span></div><div class="stat"><b>QCM + flashcards</b><span>entraînement actif</span></div><div class="stat"><b>5 blocs</b><span>fil rouge CADEFL</span></div></div>
-<div id="modules" class="section-title"><h2>◈ Mes modules</h2><small>La bibliothèque grandira avec les supports reçus</small></div><div class="modules"><article class="module"><span class="pill ok">Disponible · Bloc 1</span><h3>CADEFL — Bloc 1 · Cartographie des SI</h3><p>Fondamentaux du SI, Data → Information → Knowledge, IS ≠ IT, DFD, BPMN, ArchiMate/layer mapping, exemple EPITA et contexte MedLink utile au Bloc 1.</p><div class="module-foot"><span class="pill">Cours · Flashcards · QCM · Mémo</span><a class="btn primary" href="cours/cadefl-bloc1.html">Explorer →</a></div></article><article class="module"><span class="pill purple">À venir</span><h3>Blocs 2 à 5</h3><p>Ils seront ajoutés progressivement à partir des supports de cours, dans la même architecture LUMEN.</p></article></div>
-<div id="sources" class="section-title"><h2>◇ Sources & périmètre</h2></div><section class="panel"><p>Le Bloc 1 s'appuie sur le support CADEFL fourni, le quiz complémentaire, le modèle pédagogique d'admission EPITA et le dossier de contexte MedLink Europe. Les approfondissements pédagogiques sont distingués du contenu directement issu des supports.</p><div class="strip warn"><strong>Modèle pédagogique ≠ SI réel d'EPITA.</strong> Les applications et intégrations de l'exemple d'admission sont explicitement présentées comme des hypothèses à vérifier.</div><p><small>Site étudiant indépendant d'EPITA. Les supports originaux ne sont pas redistribués.</small></p></section><footer class="footer">◈ LUMEN — Revision Hub · Une idée d’Océane, ouverte à la promo.</footer></main></div></div></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8fbff">
+<meta name="description" content="LUMEN — portail indépendant de révision collaborative : cours CADEFL approfondis, flashcards, QCM et cas pratiques.">
+<title>LUMEN · Revision Hub | EPITA</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+<a class="brand" href="index.html">
+<svg viewBox="0 0 48 54" fill="none" aria-label="Prisme lumineux">
+<path d="M24 2 46 18 36 48 24 38 12 48 2 18 24 2Z" fill="#eef6ff" stroke="#6c64f4"/>
+<path d="M24 2 24 38 2 18 24 2Z" fill="#48b4ff"/>
+<path d="M24 2 46 18 24 38V2Z" fill="#9f5cf5"/>
+<path d="m2 18 22 20-12 10L2 18Z" fill="#31dce9"/>
+<path d="m46 18-22 20 12 10 10-30Z" fill="#7154fa"/>
+</svg>
+<span>LUMEN<small>REVISION HUB · EPITA</small></span>
+</a>
+
+<button class="btn mobile-menu" data-menu>☰ Menu</button>
+
+<div class="nav-label">Plateforme</div>
+<nav class="nav course-nav">
+<a href="#accueil">⌂ Accueil</a>
+<a href="#mes-modules">◈ Modules CADEFL</a>
+<a href="cours/cadefl-bloc1.html">01 Bloc 1 · SI</a>
+<a href="cours/cadefl-bloc2.html">02 Bloc 2 · CODIR</a>
+<a href="cours/cadefl-bloc3.html">03 Bloc 3 · CMDB</a>
+<a href="#parcours">⇢ Fil conducteur</a>
+<a href="#sources">▤ Sources & transparence</a>
+</nav>
+
+<div class="side-note">
+<strong>✦ Apprendre, vraiment.</strong><br>
+Le diplôme, c'est bien. Comprendre ce qu'on raconte, c'est mieux.
+<div class="small" style="margin-top:8px">Projet étudiant indépendant, non officiel.</div>
+</div>
+</aside>
+
+<div class="content">
+<header class="topbar">
+<span class="label">Plateforme de révision collaborative</span>
+<span class="tag">✧ CADEFL · 3 blocs disponibles</span>
+</header>
+
+<main class="wrapper">
+<section class="hero course-hero" id="accueil">
+<div class="eyebrow">✦ Une idée d'Océane, ouverte à la promo</div>
+<h1>Comprendre.<br><span class="gradient">Relier. Maîtriser.</span></h1>
+<p>Un espace pour transformer les supports de cours en vraie compréhension : notions approfondies, liens entre les blocs, flashcards, QCM, cas concrets et fil rouge MedLink. La récitation peut attendre. Le raisonnement, non.</p>
+<div class="actions">
+<a class="btn primary" href="cours/cadefl-bloc1.html">▶ Commencer au Bloc 1 →</a>
+<a class="btn" href="#mes-modules">Explorer les blocs</a>
+</div>
+<div class="chips">
+<span class="chip">Cartographie SI</span>
+<span class="chip">ArchiMate & BPMN</span>
+<span class="chip">CMDB & Assets</span>
+<span class="chip">MedLink</span>
+<span class="chip">Révision active</span>
+</div>
+</section>
+
+<section class="lesson">
+<div class="grid4">
+<div class="mini"><strong>03</strong><p>blocs CADEFL publiés</p></div>
+<div class="mini"><strong>06</strong><p>ressources pédagogiques intégrées</p></div>
+<div class="mini"><strong>45+</strong><p>questions de QCM interactif</p></div>
+<div class="mini"><strong>01</strong><p>fil rouge : MedLink</p></div>
+</div>
+</section>
+
+<section id="mes-modules" class="lesson">
+<span class="source-badge">Bibliothèque CADEFL</span>
+<h2>◈ Les blocs disponibles</h2>
+<p class="lead">Les trois premiers blocs forment déjà une chaîne cohérente : <strong>comprendre le SI → le représenter pour décider → identifier et relier les actifs à protéger.</strong></p>
+
+<div class="grid3">
+<article class="mini">
+<span class="source-badge">Disponible · Bloc 1</span>
+<h3>01 · Reading & Representing an IS</h3>
+<p><strong>Comprendre ce qu'est un système d'information</strong>, distinguer Data / Information / Knowledge, lire ses composantes et ses fonctions, puis représenter les flux avec DFD et les processus avec BPMN.</p>
+<p class="small">SI ≠ IT · DFD · BPMN · modèle d'admission EPITA · premier regard MedLink</p>
+<div class="actions"><a class="btn primary" href="cours/cadefl-bloc1.html">Explorer le Bloc 1 →</a></div>
+</article>
+
+<article class="mini">
+<span class="source-badge">Disponible · Bloc 2</span>
+<h3>02 · Modelling Standards for a CODIR</h3>
+<p><strong>Passer de la cartographie à une vue décisionnelle.</strong> ArchiMate relie Business, Application et Technology ; le BPMN est raffiné pour rendre ownership et handoffs visibles ; COBIT, ITIL et TOGAF servent de vocabulaire léger.</p>
+<p class="small">ArchiMate · Pools & Lanes · Message Flow · CODIR · D2</p>
+<div class="actions"><a class="btn primary" href="cours/cadefl-bloc2.html">Explorer le Bloc 2 →</a></div>
+</article>
+
+<article class="mini">
+<span class="source-badge">Disponible · Bloc 3</span>
+<h3>03 · Assets, Flows & the CMDB</h3>
+<p><strong>Transformer les cartes en connaissance opérationnelle.</strong> Identifier les assets, construire un registre CMDB, expliciter owners et dépendances, raisonner sur la criticité et signaler la sensibilité des données.</p>
+<p class="small">Asset Hunt · CMDB · Ownership · Dependencies · Criticality · D3</p>
+<div class="actions"><a class="btn primary" href="cours/cadefl-bloc3.html">Explorer le Bloc 3 →</a></div>
+</article>
+</div>
+</section>
+
+<section id="parcours" class="lesson">
+<span class="source-badge">Fil conducteur</span>
+<h2>⇢ De la donnée au risque : la logique des 3 blocs</h2>
+<div class="flow">
+<div class="node"><strong>Bloc 1</strong><br>Comprendre & représenter le SI</div>
+<div class="arrow">→</div>
+<div class="node"><strong>Bloc 2</strong><br>Structurer & rendre lisible au CODIR</div>
+<div class="arrow">→</div>
+<div class="node"><strong>Bloc 3</strong><br>Identifier, enregistrer & relier les assets</div>
+</div>
+<div class="callout case"><strong>MedLink reste le fil rouge.</strong> Ce n'est pas un « chapitre du Bloc 1, 2 ou 3 » : l'entreprise fictive sert de terrain d'application continu. Chaque bloc réutilise uniquement les éléments nécessaires à son objectif, et la synthèse MedLink complète viendra lorsque les cinq blocs auront été étudiés.</div>
+</section>
+
+<section class="lesson">
+<span class="source-badge">Réviser autrement</span>
+<h2>✦ Trois niveaux de lecture</h2>
+<div class="grid3">
+<div class="mini"><strong>Comprendre</strong><p>Explications développées, distinctions conceptuelles, tableaux et chaînes logiques pour ne pas apprendre des mots isolés.</p></div>
+<div class="mini"><strong>Retenir</strong><p>Flashcards et mémos express pour réactiver les notions importantes sans relire l'intégralité du cours.</p></div>
+<div class="mini"><strong>S'entraîner</strong><p>QCM interactifs et cas MedLink pour vérifier que la notion peut être appliquée, pas seulement récitée.</p></div>
+</div>
+</section>
+
+<section id="sources" class="lesson">
+<span class="source-badge">Sources & transparence</span>
+<h2>◇ Périmètre actuel de LUMEN</h2>
+<p>Les pages publiées couvrent actuellement les <strong>Blocs 1, 2 et 3 de CADEFL</strong>. Elles sont construites à partir des supports pédagogiques fournis pour chaque étape et des documents complémentaires associés, notamment les modèles/exercices et les ressources MedLink utiles au bloc concerné.</p>
+<div class="callout warn"><strong>Pas de faux contenu officiel.</strong> Lorsqu'un support pose une question ou un exercice sans fournir de correction exhaustive, LUMEN le signale au lieu d'inventer une réponse « officielle ». Les hypothèses pédagogiques restent distinguées des faits établis.</div>
+<p>Les Blocs 4 et 5 ne sont pas encore publiés ici. Ils seront intégrés à mesure que leurs supports seront traités. La synthèse autonome du cas MedLink sera réalisée à la fin des cinq blocs afin de conserver le fil rouge complet.</p>
+<p class="small">Site pédagogique étudiant, indépendant d'EPITA. Les supports originaux ne sont pas redistribués dans cette archive.</p>
+</section>
+
+<footer class="footer">◈ LUMEN — Revision Hub · Une idée d’Océane, ouverte à la promo · Projet étudiant non officiel.</footer>
+</main>
+</div>
+</div>
+</body>
+</html>
