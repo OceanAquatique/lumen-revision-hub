@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8fbff">
+<meta name="description" content="LUMEN — Fondamentaux de la gouvernance des données et cybersécurité · M. YOROBI.">
+<title>Gouvernance Data & Cyber · LUMEN</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+
+<body>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+<a class="brand" href="../index.html">
+<svg viewBox="0 0 48 54" fill="none" aria-label="LUMEN"><path d="M24 2 46 18 36 48 24 38 12 48 2 18 24 2Z" fill="#eef6ff" stroke="#6c64f4"/><path d="M24 2 24 38 2 18 24 2Z" fill="#48b4ff"/><path d="M24 2 46 18 24 38V2Z" fill="#9f5cf5"/><path d="m2 18 22 20-12 10L2 18Z" fill="#31dce9"/><path d="m46 18-22 20 12 10 10-30Z" fill="#7154fa"/></svg>
+<span>LUMEN<small>DATA · CYBER · GOUVERNANCE</small></span>
+</a>
+
+<button class="btn mobile-menu" data-menu>☰ Menu</button>
+
+<div class="nav-label">Cours · M. YOROBI</div>
+<nav class="nav course-nav">
+<a href="#accueil">⌂ Accueil</a>
+<a href="#fil">⇢ Fil conducteur</a>
+<a href="#s1">01 · Territoire</a>
+<a href="#s2">02 · Data & DAMA</a>
+<a href="#s3">03 · Cyber & PSSI</a>
+<a href="#s4">04 · Cycle de vie & GRC</a>
+<a href="#uber">🚗 Uber · cas fil rouge</a>
+<a href="#tp">▤ TP1 & TP2</a>
+<a href="#glossaire">◇ Glossaire</a>
+<a href="#flashcards">◇ Flashcards</a>
+<a href="#quiz">☑ QCM</a>
+<a href="#memo">◴ Mémo express</a>
+</nav>
+
+<div class="reading"><div class="reading-head"><span>Progression</span><span>lecture</span></div><div class="progress"><span id="reading-progress"></span></div></div>
+<div class="side-note">
+<strong>✦ Objectif LUMEN</strong><br>
+Comprendre le raisonnement du cours, pas réciter les slides.
+<div class="small" style="margin-top:8px"><a href="../index.html">⌂ Retour à LUMEN</a><br>Support étudiant indépendant · EPITA</div>
+</div>
+</aside>
+
+<div class="content">
+<header class="topbar">
+<span class="label">Fondamentaux de la gouvernance des données et cybersécurité</span>
+<span class="tag">M. YOROBI · 4 séances</span>
+</header>
+
+<main class="wrapper">
+<section class="hero course-hero" id="accueil">
+<div class="eyebrow">EPITA · MSc Informatique & Management · M. YOROBI</div>
+<h1>Du métier au risque.<br><span class="gradient">De la donnée à la gouvernance.</span></h1>
+<p>Le cours traverse beaucoup de territoires — Internet, données, SI, cyber, IA, architecture, réglementation, cryptographie — mais il ne faut pas les apprendre comme une collection de sujets séparés. Le fil rouge est de savoir <strong>partir du besoin métier, comprendre le SI et ses données, identifier les risques, choisir les contrôles et organiser la gouvernance.</strong></p>
+<div class="chips">
+<span class="chip">Data Governance</span><span class="chip">DAMA-DMBOK</span><span class="chip">DIKW</span><span class="chip">CIA</span><span class="chip">EBIOS RM</span><span class="chip">PSSI</span><span class="chip">GRC</span><span class="chip">COBIT · TOGAF · ITIL</span><span class="chip">Uber for Business</span>
+</div>
+<div class="callout case"><strong>Comment lire LUMEN :</strong> 📚 <b>Cours du professeur</b> = ce que portent les supports · 💡 <b>Explication</b> = la logique qui relie les notions · 🚗 <b>Application Uber</b> = transposition au cas étudié · 🎯 <b>À retenir</b> = ce que tu dois être capable de restituer et d'utiliser.</div>
+</section>
+
+<section id="fil" class="lesson">
+<span class="source-badge">Vue d'ensemble · Explication LUMEN</span>
+<h2>⇢ Le fil conducteur des 4 séances</h2>
+<p class="lead">La compétence finale n'est pas de connaître chaque mot-clé isolément. C'est de savoir <strong>changer de niveau de lecture</strong> : du métier vers le système, du système vers la donnée, de la donnée vers le risque, puis du risque vers la décision.</p>
+
+<div class="flow">
+<div class="node"><strong>STRATÉGIE</strong><br>Pourquoi ?</div><div class="arrow">→</div>
+<div class="node"><strong>MÉTIER</strong><br>Que veut-on faire ?</div><div class="arrow">→</div>
+<div class="node"><strong>PROCESSUS & DATA</strong><br>Que manipule-t-on ?</div><div class="arrow">→</div>
+<div class="node"><strong>SI & ARCHITECTURE</strong><br>Comment ?</div>
+</div>
+<div class="flow">
+<div class="node"><strong>CYBERSÉCURITÉ</strong><br>Que protéger ?</div><div class="arrow">→</div>
+<div class="node"><strong>RISQUES</strong><br>Que peut-il arriver ?</div><div class="arrow">→</div>
+<div class="node"><strong>CONFORMITÉ</strong><br>Quelles exigences ?</div><div class="arrow">→</div>
+<div class="node"><strong>GOUVERNANCE</strong><br>Qui décide et contrôle ?</div>
+</div>
+
+<div class="grid4">
+<div class="mini"><strong>S1 · Poser le territoire</strong><p>Gouvernance, évolution du Web, fonctions Uber, Open Data et profils d'attaquants.</p></div>
+<div class="mini"><strong>S2 · Gouverner la donnée</strong><p>DIKW, DAMA-DMBOK, qualité, architecture Uber, CVSS et articulation SI/Data.</p></div>
+<div class="mini"><strong>S3 · Gouverner la cyber</strong><p>CIA, PSSI, EBIOS RM, audit, IA, résilience et responsabilités.</p></div>
+<div class="mini"><strong>S4 · Industrialiser la gouvernance</strong><p>By Design, cycle de vie, BPMN, cartographie, GRC, frameworks, conformité et audit.</p></div>
+</div>
+
+<div class="callout"><strong>La boucle complète :</strong> le métier crée des processus ; les processus consomment et produisent de la donnée ; la donnée vit dans un SI ; le SI expose une surface d'attaque ; cette surface crée des scénarios de risque ; la gouvernance décide comment les réduire, les accepter, les transférer ou les surveiller.</div>
+</section>
+
+<section id="s1" class="lesson">
+<span class="source-badge">Séance 1 · Gouvernance, Données & Cybersécurité</span>
+<h2>01 — Poser le territoire : gouvernance, fonctions, données et menace</h2>
+
+<h3>📚 Cours du professeur — ce que la séance met sur la table</h3>
+<p>Le support démarre volontairement très large : question de la gouvernance, histoire d'Internet depuis ARPANET, évolution Web 1.0 → Web 4.0, empathie et observation des usages, modèle fonctionnel Uber, Open Data, cybersécurité et communautés de hackers. L'objectif n'est pas que chacun de ces sujets devienne un chapitre technique complet : ils montrent que <strong>la gouvernance d'un système dépend à la fois de son histoire, de ses usages, de ses données, de ses fonctions et de ses menaces.</strong></p>
+
+<h3>💡 Gouvernance : le mot qui tient tout le reste</h3>
+<p>Dans LUMEN, on peut lire la gouvernance comme le système de décision qui répond à cinq questions : <strong>qui décide ? sur quoi ? selon quelles règles ? avec quelles responsabilités ? comment vérifie-t-on que la décision est appliquée ?</strong> Cela permet de distinguer la gouvernance de l'administration quotidienne. L'administration exécute ; la gouvernance fixe le cadre, arbitre, contrôle et rend responsable.</p>
+
+<div class="grid3">
+<div class="mini"><strong>Objectifs</strong><p>Quelle valeur l'organisation veut-elle créer ou protéger ?</p></div>
+<div class="mini"><strong>Décisions</strong><p>Qui arbitre les priorités, budgets, niveaux de risque et règles ?</p></div>
+<div class="mini"><strong>Contrôle</strong><p>Comment mesurer que le système respecte réellement le cadre décidé ?</p></div>
+</div>
+
+<h3>📚 MEF Uber : regarder d'abord les fonctions</h3>
+<p>Le support présente un <strong>MEF — Modèle d'Évaluation Fonctionnelle</strong> appliqué à Uber : création de compte, réception et suivi de commande/course, gestion des conducteurs, paiement et cagnotte, mise en correspondance des trajets, parrainage et codes promotionnels. Le tableau associe aussi importance, typologie et suivi de bugs/mises à jour.</p>
+
+<h3>💡 Pourquoi le MEF est important avant la cyber</h3>
+<p>Une analyse cyber directement centrée sur les technologies risque de perdre le sens métier. Le MEF remet les <strong>fonctions</strong> au premier plan. Si la mise en correspondance chauffeur/passager est critique, les composants et données qui la supportent deviennent eux-mêmes importants. Si une fonction est secondaire, son indisponibilité peut être moins grave. La criticité technique découle donc en partie de la criticité fonctionnelle.</p>
+
+<div class="flow">
+<div class="node"><strong>Fonction</strong><br>Matching</div><div class="arrow">→</div>
+<div class="node"><strong>Données</strong><br>positions, disponibilité</div><div class="arrow">→</div>
+<div class="node"><strong>Composants</strong><br>API, services, stockage</div><div class="arrow">→</div>
+<div class="node"><strong>Risque</strong><br>erreur, fraude, panne</div>
+</div>
+
+<h3>📚 Open Data : une donnée peut changer de statut selon son cadre d'usage</h3>
+<p>Le support définit l'Open Data comme de l'information librement accessible au public, sans restriction d'usage ou de distribution. Pour la gouvernance, l'intérêt est surtout de comprendre que <strong>toutes les données ne sont pas gouvernées de la même manière</strong> : donnée ouverte, donnée interne, donnée personnelle, donnée sensible ou donnée réglementée n'appellent pas les mêmes règles d'accès, de qualité, de conservation et de diffusion.</p>
+
+<h3>📚 Les hackers : profils différents, intentions différentes</h3>
+<p>La séance termine par différents types et communautés de hackers. L'idée utile n'est pas de mémoriser tous les noms : une organisation doit distinguer <strong>motivation, capacité, ressources et objectifs</strong> d'un attaquant. Un hacktiviste, un groupe criminel et une menace étatique ne produisent pas les mêmes scénarios ni les mêmes priorités de défense.</p>
+
+<h3>🚗 Application Uber</h3>
+<p>Pour Uber, on commence donc par les usages : authentifier un utilisateur, gérer une course, mettre en relation l'offre et la demande, facturer, payer, administrer une flotte. Ensuite seulement on demande quelles données et quels composants permettent ces fonctions, quels acteurs y accèdent et quels événements pourraient les perturber.</p>
+
+<div class="callout case"><strong>🎯 À retenir — Séance 1 :</strong> la cyber ne commence pas avec le firewall. Elle commence par comprendre le métier. <strong>Business → fonctions → données → SI → accès → menaces → risque → gouvernance.</strong> L'histoire du Web et les exemples culturels donnent du contexte ; le MEF, la donnée et la notion d'acteur hostile sont les ponts les plus utiles pour les TP.</div>
+</section>
+
+<section id="s2" class="lesson">
+<span class="source-badge">Séance 2 · Gouvernance des Données · DAMA-DMBOK & Qualité</span>
+<h2>02 — De la donnée brute à la décision : qualité, architecture et vulnérabilités</h2>
+
+<h3>📚 Cours du professeur — les trois axes de la séance</h3>
+<p>La séance combine trois niveaux qui paraissent différents mais sont fortement liés : <strong>la valeur de la donnée</strong> avec DIKW, <strong>l'organisation de sa gestion</strong> avec DAMA-DMBOK, et <strong>la sécurité technique</strong> avec CVSS et les architectures de cas d'usage. Uber, Airbnb et Netflix servent d'exemples ; pour LUMEN, Uber reste le cas principal.</p>
+
+<h3>1 · DIKW : pourquoi une donnée seule ne suffit pas</h3>
+<div class="grid4">
+<div class="mini"><strong>Data</strong><p>Élément brut : valeur, coordonnée, identifiant, timestamp.</p></div>
+<div class="mini"><strong>Information</strong><p>La donnée replacée dans un contexte et interprétée.</p></div>
+<div class="mini"><strong>Knowledge</strong><p>Compréhension réutilisable issue de plusieurs informations.</p></div>
+<div class="mini"><strong>Wisdom</strong><p>Décision ou jugement fondé sur cette connaissance.</p></div>
+</div>
+
+<p>Le point important est la <strong>transformation</strong>. Une latitude/longitude brute n'est pas encore « un chauffeur proche d'un passager ». Il faut du contexte, des traitements et des règles métier. Gouverner la donnée ne consiste donc pas seulement à stocker proprement : il faut maintenir sa qualité, son sens, sa traçabilité et sa capacité à soutenir une décision.</p>
+
+<div class="callout"><strong>🚗 Uber en DIKW :</strong> coordonnées GPS → positions contextualisées → connaissance de l'offre/demande dans une zone → décision de matching ou de repositionnement.</div>
+
+<h3>2 · DAMA-DMBOK : le management de la donnée n'est pas un seul métier</h3>
+<p><strong>DAMA-DMBOK — Data Management Body of Knowledge</strong> sert de cadre de référence pour le management des données. La logique du support est d'élargir la vision : gouvernance, qualité, métadonnées, architecture, stockage, intégration, données de référence, sécurité et autres disciplines doivent fonctionner ensemble.</p>
+
+<table>
+<thead><tr><th>Dimension</th><th>Question de gouvernance</th><th>Risque si elle est faible</th></tr></thead>
+<tbody>
+<tr><td><strong>Qualité</strong></td><td>La donnée est-elle exacte, complète et exploitable ?</td><td>Décision erronée, mauvais traitement métier.</td></tr>
+<tr><td><strong>Métadonnées</strong></td><td>Sait-on ce que signifie la donnée et d'où elle vient ?</td><td>Ambiguïté, mauvaise réutilisation, perte de traçabilité.</td></tr>
+<tr><td><strong>Architecture</strong></td><td>Où circule et où réside la donnée ?</td><td>Flux inconnus, duplication, dépendances invisibles.</td></tr>
+<tr><td><strong>Accès / sécurité</strong></td><td>Qui peut voir ou modifier quoi ?</td><td>Fuite, altération ou usage non autorisé.</td></tr>
+<tr><td><strong>Référence / cohérence</strong></td><td>Les systèmes parlent-ils du même objet de la même manière ?</td><td>Incohérences entre applications et décisions contradictoires.</td></tr>
+</tbody>
+</table>
+
+<h3>3 · DAMA-DMBOK vs ISO 27001</h3>
+<p>Le support les met en regard. Il ne faut pas les opposer : <strong>DAMA-DMBOK</strong> organise le management de la donnée ; <strong>ISO 27001</strong> structure un système de management de la sécurité de l'information. Une organisation peut avoir des données très sécurisées mais de mauvaise qualité ; ou d'excellente qualité mais mal protégées. La gouvernance mature traite les deux dimensions.</p>
+
+<h3>4 · CVSS : sévérité technique ≠ risque organisationnel</h3>
+<p><strong>CVSS — Common Vulnerability Scoring System</strong> fournit un score de sévérité technique. Les niveaux vus dans le cours sont : <strong>Low 0.1–3.9 · Medium 4.0–6.9 · High 7.0–8.9 · Critical 9.0–10.0.</strong></p>
+
+<div class="grid3">
+<div class="mini"><strong>Base Metrics</strong><p>Attack Vector, Attack Complexity, Privileges Required, User Interaction, Scope et impacts C/I/A.</p></div>
+<div class="mini"><strong>Temporal Metrics</strong><p>Maturité de l'exploit, niveau de remédiation et confiance dans l'information disponible.</p></div>
+<div class="mini"><strong>Environmental Metrics</strong><p>Importance de C/I/A dans le contexte et adaptation des métriques au système réel.</p></div>
+</div>
+
+<div class="callout warn"><strong>Le piège à éviter :</strong> un score CVSS ne dit pas à lui seul « ce risque est critique pour l'entreprise ». Il décrit la vulnérabilité. Il faut encore regarder l'actif touché, son exposition, la vraisemblance, les dépendances et les impacts métier.</div>
+
+<h3>5 · Uber : du front aux services de traitement</h3>
+<p>Le support utilise un schéma Uber avec <strong>Driver App / Rider App → API Gateway → services de fulfillment → index géospatial et moteur de matching → stockage</strong>. L'intérêt pédagogique est de comprendre la chaîne d'un service numérique : une interface génère une requête, un point d'entrée la reçoit, des services orchestrent le traitement, d'autres composants fournissent une capacité spécialisée et des données sont persistées.</p>
+
+<table>
+<thead><tr><th>Élément</th><th>Rôle pédagogique</th><th>Question cyber / gouvernance</th></tr></thead>
+<tbody>
+<tr><td>Applications</td><td>Interaction avec les utilisateurs.</td><td>Qui est authentifié ? quelles données sont exposées ?</td></tr>
+<tr><td>API Gateway</td><td>Point d'entrée contrôlé vers les services.</td><td>Authentification, autorisation, filtrage, journalisation.</td></tr>
+<tr><td>Fulfillment</td><td>Orchestration du cycle de la course / job / offre.</td><td>Intégrité des états et règles métier.</td></tr>
+<tr><td>Geospatial Index</td><td>Localisation de l'offre disponible.</td><td>Confidentialité, exactitude et fraîcheur des positions.</td></tr>
+<tr><td>Matching Engine</td><td>Associe demande et offre.</td><td>Disponibilité, intégrité des règles, dépendances.</td></tr>
+<tr><td>Stockage</td><td>Persistance des données.</td><td>Accès, chiffrement, sauvegarde, rétention, résilience.</td></tr>
+</tbody>
+</table>
+
+<h3>6 · Le Business Model Canvas : pourquoi l'architecture doit revenir au métier</h3>
+<p>Le cas Uber passe aussi par le modèle économique. C'est important en GRC : une panne ou une fuite n'a pas d'impact « abstrait ». Elle touche une proposition de valeur, une relation client, des partenaires, des revenus ou des opérations. Pour évaluer un risque, il faut donc savoir <strong>où la valeur est créée et de quoi elle dépend.</strong></p>
+
+<div class="callout case"><strong>🎯 À retenir — Séance 2 :</strong> Data → Information → Knowledge → décision. La donnée doit être gouvernée sur son cycle de vie, pas seulement sécurisée. DAMA et ISO 27001 sont complémentaires. CVSS mesure une vulnérabilité, pas le risque métier. Et une architecture n'est utile en GRC que si l'on sait relier ses composants aux fonctions et à la valeur métier.</div>
+</section>
+
+<section id="s3" class="lesson">
+<span class="source-badge">Séance 3 · Gouvernance de la Cybersécurité — Cadre et Politique</span>
+<h2>03 — Passer de la protection technique à la politique et au risque</h2>
+
+<h3>📚 Cours du professeur — changement de niveau</h3>
+<p>La séance 3 change clairement de perspective : on ne demande plus seulement « comment protéger ? », mais <strong>comment organiser la sécurité dans l'entreprise</strong>. Le support enchaîne PSSI, CIA, EBIOS RM, protection des données, Cambridge Analytica, hacktivisme, AI Act, gouvernance de l'IA, DORA, finance, crypto-économie et MiCA.</p>
+
+<h3>1 · PSSI : traduire la stratégie en règles</h3>
+<p><strong>PSSI — Politique de Sécurité des Systèmes d'Information</strong> est la référence qui formalise les objectifs, principes, règles, responsabilités et exigences de sécurité. Elle fait le lien entre la gouvernance et l'opérationnel.</p>
+
+<div class="flow">
+<div class="node"><strong>Gouvernance</strong><br>niveau de sécurité attendu</div><div class="arrow">→</div>
+<div class="node"><strong>PSSI</strong><br>règles & responsabilités</div><div class="arrow">→</div>
+<div class="node"><strong>Contrôles</strong><br>mesures techniques & organisationnelles</div><div class="arrow">→</div>
+<div class="node"><strong>Audit</strong><br>preuves & écarts</div>
+</div>
+
+<p>Le support présente une logique d'audit autour de la PSSI avec sensibilisation, pentest et scan de vulnérabilités selon le besoin, campagnes de phishing/sensibilisation, rapport d'écarts, recommandations et accompagnement à la remédiation. L'enjeu est la boucle de contrôle : <strong>une politique qui n'est jamais testée n'est qu'un document.</strong></p>
+
+<h3>2 · CIA Triad : trois propriétés, trois types d'impact</h3>
+<div class="grid3">
+<div class="mini"><strong>Confidentiality</strong><p>Empêcher la lecture ou la divulgation non autorisée.</p></div>
+<div class="mini"><strong>Integrity</strong><p>Empêcher l'altération non autorisée ou détecter qu'elle a eu lieu.</p></div>
+<div class="mini"><strong>Availability</strong><p>Garantir que le service et l'information restent accessibles au bon moment.</p></div>
+</div>
+
+<div class="callout"><strong>🚗 Uber :</strong> fuite de données de trajet → confidentialité · modification frauduleuse d'une tarification ou d'un objet métier → intégrité · DDoS ou panne rendant le service inutilisable → disponibilité.</div>
+
+<h3>3 · EBIOS RM : construire des scénarios plutôt qu'une simple liste de menaces</h3>
+<p>Le support introduit <strong>EBIOS RM</strong>, méthode d'analyse de risque en cinq ateliers. La force de la méthode est de relier les événements redoutés du métier aux sources de risque puis aux chemins d'attaque plausibles.</p>
+
+<table>
+<thead><tr><th>Atelier</th><th>Question simple</th><th>Sortie utile</th></tr></thead>
+<tbody>
+<tr><td><strong>1 · Cadrage & socle</strong></td><td>Que protège-t-on et quelles règles existent déjà ?</td><td>Périmètre, valeurs métier, événements redoutés, socle.</td></tr>
+<tr><td><strong>2 · Sources de risque</strong></td><td>Qui pourrait vouloir nous nuire, et pourquoi ?</td><td>Sources de risque et objectifs visés.</td></tr>
+<tr><td><strong>3 · Scénarios stratégiques</strong></td><td>Par quels écosystèmes et chemins généraux ?</td><td>Scénarios de haut niveau.</td></tr>
+<tr><td><strong>4 · Scénarios opérationnels</strong></td><td>Comment l'attaque peut-elle concrètement se dérouler ?</td><td>Chemins techniques et vraisemblance.</td></tr>
+<tr><td><strong>5 · Traitement</strong></td><td>Que décide-t-on de faire ?</td><td>Mesures, risque résiduel et plan d'amélioration.</td></tr>
+</tbody>
+</table>
+
+<div class="callout case"><strong>Lecture GRC :</strong> EBIOS RM ne remplace pas l'expert technique. Il prend ses constats, les replace dans un scénario et permet à la gouvernance d'arbitrer sur un risque compréhensible par le métier.</div>
+
+<h3>4 · Cambridge Analytica : la sécurité n'est pas seulement du chiffrement</h3>
+<p>L'exemple Cambridge Analytica sert à montrer que la protection des données concerne aussi <strong>consentement, finalité, transparence, maîtrise des usages, partage et responsabilité.</strong> Une donnée peut être techniquement protégée mais utilisée d'une manière qui pose un problème de gouvernance.</p>
+
+<h3>5 · IA : plus d'autonomie = plus de besoin de gouvernance</h3>
+<p>Les nombreux exemples IA du support illustrent une tendance : quand un système ne fait plus seulement « produire une réponse » mais peut enchaîner des actions, interagir avec des outils ou prendre davantage d'initiatives, la gouvernance doit devenir plus explicite.</p>
+
+<div class="grid4">
+<div class="mini"><strong>Rôles</strong><p>Qui possède le modèle, le processus et la décision ?</p></div>
+<div class="mini"><strong>Permissions</strong><p>À quelles données, fonctions et outils l'agent peut-il accéder ?</p></div>
+<div class="mini"><strong>Traçabilité</strong><p>Peut-on reconstruire ce qu'il a fait et pourquoi ?</p></div>
+<div class="mini"><strong>Supervision</strong><p>Où impose-t-on validation humaine, monitoring ou arrêt ?</p></div>
+</div>
+
+<p><strong>IA générative</strong> : produire un contenu. <strong>IA agentique</strong> : poursuivre un objectif en orchestrant plusieurs actions. Plus le système agit, plus deviennent critiques l'autorisation, la journalisation, la séparation des responsabilités et la capacité d'audit.</p>
+
+<h3>6 · Réglementations : comprendre leur logique plutôt que mémoriser tous les détails</h3>
+<p><strong>EU AI Act</strong> introduit une logique d'obligations proportionnées au niveau de risque des usages d'IA. <strong>DORA — Digital Operational Resilience Act</strong> cible la résilience numérique du secteur financier autour du risque ICT, des incidents, des tests de résilience, des tiers et du partage d'information. <strong>MiCA</strong> encadre les crypto-actifs dans l'Union européenne. Pour Uber, ces textes ne sont pas tous directement applicables au cas étudié : ils servent surtout à comprendre que <strong>secteur, usage et technologie modifient les obligations de gouvernance.</strong></p>
+
+<div class="callout case"><strong>🎯 À retenir — Séance 3 :</strong> Objectifs métier → SI & données → CIA → menaces et vulnérabilités → scénarios EBIOS RM → politique PSSI → contrôles → audit → remédiation. La gouvernance cyber transforme des constats techniques en règles, responsabilités, décisions et preuves.</div>
+</section>
+
+<section id="s4" class="lesson">
+<span class="source-badge">Séance 4 · Cycle de Vie des Systèmes d'Information et GRC</span>
+<h2>04 — Faire vivre la gouvernance dans le cycle du SI</h2>
+
+<h3>📚 Cours du professeur — la séance de convergence</h3>
+<p>Cette séance rassemble les briques précédentes : Privacy by Design, Security by Design, cycle en V, GRC, automatisation, BPMN, processus métier, performance SI, MEF, cartographie, gouvernance, audit, COBIT/TOGAF/ITIL, frameworks de sécurité, RGPD, HIPAA, PIPL, cryptographie, blockchain et dossiers de santé électroniques. C'est la séance où le cours devient une <strong>chaîne de gouvernance complète</strong>.</p>
+
+<h3>1 · Privacy by Design & Security by Design</h3>
+<p>Le principe commun est simple : <strong>ne pas attendre la mise en production pour se demander comment protéger le système.</strong> Les exigences de sécurité et de protection des données doivent être formulées dès le besoin, traduites dans les spécifications, implémentées puis vérifiées pendant les tests et l'exploitation.</p>
+
+<div class="flow">
+<div class="node"><strong>Besoin</strong><br>enjeux métier & données</div><div class="arrow">→</div>
+<div class="node"><strong>Spécifications</strong><br>exigences sécurité / privacy</div><div class="arrow">→</div>
+<div class="node"><strong>Réalisation</strong><br>contrôles</div><div class="arrow">→</div>
+<div class="node"><strong>Vérification</strong><br>preuves & tests</div>
+</div>
+
+<h3>2 · Cycle en V : chaque exigence doit retrouver son test</h3>
+<p>Le cycle présenté va de l'analyse et des spécifications vers la conception détaillée et la réalisation, puis remonte par tests unitaires, intégration, validation et recette. <strong>MOA — Maîtrise d'Ouvrage</strong> porte le besoin métier ; <strong>MOE — Maîtrise d'Œuvre</strong> conçoit et réalise la solution ; <strong>V&V — Verification & Validation</strong> vérifie que la solution est correctement construite et répond au besoin.</p>
+
+<table>
+<thead><tr><th>Étape</th><th>Question sécurité</th><th>Exemple de preuve attendue</th></tr></thead>
+<tbody>
+<tr><td>Analyse</td><td>Quels actifs et impacts faut-il protéger ?</td><td>Exigences métier et criticité.</td></tr>
+<tr><td>Spécifications</td><td>Quelles règles d'accès, de journalisation, de rétention ?</td><td>Exigences formalisées.</td></tr>
+<tr><td>Réalisation</td><td>Comment les contrôles sont-ils implémentés ?</td><td>Configuration, code, architecture.</td></tr>
+<tr><td>Tests</td><td>Les contrôles fonctionnent-ils réellement ?</td><td>Tests unitaires, intégration, sécurité.</td></tr>
+<tr><td>Recette</td><td>Le besoin métier et les exigences sont-ils satisfaits ?</td><td>Validation avant mise en service.</td></tr>
+</tbody>
+</table>
+
+<h3>3 · GRC : Governance, Risk & Compliance</h3>
+<p>GRC n'est pas un logiciel unique ni une équipe chargée de produire des tableaux. C'est une logique d'intégration : <strong>la gouvernance fixe l'orientation, le risk management traite l'incertitude, la compliance vérifie les obligations.</strong> Les outils comme Drata, Vanta ou Isora cités dans le cours illustrent l'automatisation de preuves et de contrôles, mais ne remplacent pas la gouvernance.</p>
+
+<div class="grid3">
+<div class="mini"><strong>Governance</strong><p>Objectifs, arbitrages, rôles, politiques et supervision.</p></div>
+<div class="mini"><strong>Risk</strong><p>Identification, analyse, priorisation et traitement des risques.</p></div>
+<div class="mini"><strong>Compliance</strong><p>Exigences légales, réglementaires, contractuelles ou normatives et preuves associées.</p></div>
+</div>
+
+<h3>4 · BPMN : modéliser le travail avant de sécuriser le workflow</h3>
+<p><strong>BPMN — Business Process Model and Notation</strong> sert à représenter activités, événements, décisions, séquences et responsabilités. Le cas Airbnb du support distingue bien <strong>processus métier</strong> et <strong>algorithme</strong> : le processus décrit le parcours global de réservation ; l'algorithme de recherche n'en est qu'un mécanisme interne.</p>
+
+<div class="callout"><strong>Pourquoi c'est utile en cyber :</strong> si tu ne sais pas où une décision est prise, qui agit, quelle donnée entre ou sort et où se trouve un handoff, tu risques de poser les contrôles au mauvais endroit.</div>
+
+<h3>5 · Performance SI : pas seulement « ça répond vite »</h3>
+<p>Le support définit la performance comme l'adéquation entre <strong>les résultats obtenus, les efforts consentis et les objectifs fixés.</strong> En gouvernance SI, une architecture peut être très performante techniquement mais mauvaise économiquement, peu résiliente ou mal alignée avec la stratégie.</p>
+
+<h3>6 · MEF + cartographie : savoir ce qui existe et pourquoi c'est important</h3>
+<p>Le <strong>MEF</strong> revient en séance 4 : il aide à inventorier les fonctions et leur importance. La <strong>cartographie SI</strong> rend ensuite visibles actifs, applications, infrastructures, flux et dépendances. Ensemble, ils construisent le pont entre métier et risque.</p>
+
+<div class="flow">
+<div class="node"><strong>MEF</strong><br>fonctions & criticité</div><div class="arrow">→</div>
+<div class="node"><strong>Cartographie</strong><br>actifs, flux, dépendances</div><div class="arrow">→</div>
+<div class="node"><strong>Analyse de risques</strong><br>scénarios & impacts</div><div class="arrow">→</div>
+<div class="node"><strong>GRC</strong><br>priorités & contrôles</div>
+</div>
+
+<h3>7 · Gouvernance SI : cinq angles de décision</h3>
+<p>Le support positionne la gouvernance SI autour de cinq préoccupations : <strong>alignement stratégique, création de valeur, gestion des ressources, gestion des risques et mesure de la performance.</strong> C'est une grille très utile pour ne pas réduire un comité de gouvernance à « parler sécurité ».</p>
+
+<h3>8 · Les douze vecteurs d'audit</h3>
+<p>La séance présente douze vecteurs qui élargissent l'audit : <strong>stratégie, innovation, risques, données, architecture, portefeuille de projets, projets, ressources humaines, prestataires, services, budget/performance, marketing/communication.</strong> L'idée est qu'un SI peut échouer par un problème technique, mais aussi par manque d'ownership, dette organisationnelle, dépendance fournisseur, mauvaise allocation des ressources ou gouvernance incohérente.</p>
+
+<h3>9 · COBIT, TOGAF, ITIL : trois outils de lecture différents</h3>
+<table>
+<thead><tr><th>Framework</th><th>Rôle simplifié</th><th>Question utile</th></tr></thead>
+<tbody>
+<tr><td><strong>COBIT</strong></td><td>Gouvernance et management de l'information & de la technologie.</td><td>Qui décide, dirige, mesure et contrôle ?</td></tr>
+<tr><td><strong>TOGAF</strong></td><td>Architecture d'entreprise et méthode ADM.</td><td>Comment organiser et faire évoluer les couches d'architecture ?</td></tr>
+<tr><td><strong>ITIL</strong></td><td>Management des services IT.</td><td>Comment fournir, opérer et améliorer le service rendu ?</td></tr>
+</tbody>
+</table>
+<div class="callout case"><strong>Mnémotechnique :</strong> COBIT = <b>gouverner</b> · TOGAF = <b>architecturer</b> · ITIL = <b>fournir et améliorer des services</b>.</div>
+
+<h3>10 · Frameworks sécurité & conformité : choisir selon le besoin</h3>
+<p>Le support cite notamment ISO 27000, NIST SP 800-53/171, NIST CSF, CIS Controls, HITRUST et COBIT, puis plusieurs régimes de protection des données ou sectoriels. Ils ne couvrent pas exactement le même objet : certains structurent un système de management, d'autres des contrôles, un cadre de résilience ou une obligation réglementaire.</p>
+
+<div class="grid3">
+<div class="mini"><strong>RGPD · UE</strong><p>Protection des données personnelles : finalité, droits, responsabilité, sécurité et gouvernance des traitements.</p></div>
+<div class="mini"><strong>HIPAA · USA</strong><p>Cadre américain de protection des informations de santé dans son champ d'application.</p></div>
+<div class="mini"><strong>PIPL · Chine</strong><p>Loi chinoise de protection des informations personnelles.</p></div>
+</div>
+
+<p><strong>PCA — Plan de Continuité d'Activité</strong> vise à maintenir les activités essentielles pendant une perturbation ; <strong>PRA — Plan de Reprise d'Activité</strong> organise le rétablissement après interruption.</p>
+
+<h3>11 · Les pages crypto, blockchain et santé : culture technique, pas cœur du raisonnement Uber</h3>
+<p>La fin du support aborde cryptographie, blockchain et dossier de santé électronique. Ce sont des illustrations de contrôles, d'intégrité, de confidentialité et d'interopérabilité. Pour réviser le cours, il faut surtout retenir le principe : <strong>une technologie n'est jamais une gouvernance à elle seule.</strong> Chiffrer une donnée ne décide ni qui doit y accéder, ni combien de temps la garder, ni qui répond d'un incident.</p>
+
+<div class="callout case"><strong>🎯 À retenir — Séance 4 :</strong> Objectifs métier → processus / fonctions → SI & données → cycle de vie & By Design → cartographie → risque → GRC → frameworks → conformité → contrôles → audit → amélioration continue.</div>
+</section>
+
+<section id="uber" class="lesson">
+<span class="source-badge">Cas fil rouge · Uber / Uber for Business</span>
+<h2>🚗 Uber : reconstruire un seul raisonnement avec les 4 séances</h2>
+<p class="lead">Le cas Uber est utile parce qu'il oblige à passer de la vision utilisateur à la vision système puis à la vision gouvernance. Ce tableau constitue la lecture la plus compacte de tout le cours.</p>
+
+<table>
+<thead><tr><th>Niveau</th><th>Question</th><th>Application Uber</th><th>Notions mobilisées</th></tr></thead>
+<tbody>
+<tr><td><strong>Stratégie</strong></td><td>Quelle valeur ?</td><td>Déplacement, mise en relation, gestion B2B, facturation, expérience utilisateur.</td><td>Gouvernance · performance</td></tr>
+<tr><td><strong>Fonctions</strong></td><td>Que fait le service ?</td><td>Compte, course, matching, paiement, suivi, administration.</td><td>MEF</td></tr>
+<tr><td><strong>Processus</strong></td><td>Qui fait quoi et quand ?</td><td>Demande → traitement → matching → course → paiement → suivi.</td><td>BPMN</td></tr>
+<tr><td><strong>Données</strong></td><td>Que manipule-t-on ?</td><td>Identités, localisation, trajets, comptes, données de flotte et facturation.</td><td>DIKW · DAMA</td></tr>
+<tr><td><strong>Architecture</strong></td><td>Quels composants ?</td><td>Interfaces, API, services, traitements, stockage et tiers dans une vue simplifiée.</td><td>Cartographie SI</td></tr>
+<tr><td><strong>Cyber</strong></td><td>Quelles propriétés protéger ?</td><td>Confidentialité des données, intégrité des opérations, disponibilité du service.</td><td>CIA · PSSI</td></tr>
+<tr><td><strong>Vulnérabilités</strong></td><td>Quelles faiblesses ?</td><td>Autorisation objet, phishing, fatigue MFA, privilèges, tiers, mauvaise configuration.</td><td>OWASP · CVSS</td></tr>
+<tr><td><strong>Risque</strong></td><td>Quels scénarios et impacts ?</td><td>Exposition inter-tenant, fraude, compromission interne, indisponibilité, atteinte réglementaire.</td><td>EBIOS RM · matrice</td></tr>
+<tr><td><strong>Gouvernance</strong></td><td>Que décide-t-on ?</td><td>Contrôles, priorités, rôles, traitement du risque, réponse et reprise.</td><td>GRC · NIST · PCA/PRA</td></tr>
+</tbody>
+</table>
+
+<h3>Une mini-chaîne d'analyse à réutiliser</h3>
+<div class="flow">
+<div class="node"><strong>Actif</strong><br>compte admin</div><div class="arrow">→</div>
+<div class="node"><strong>Menace</strong><br>phishing / social engineering</div><div class="arrow">→</div>
+<div class="node"><strong>Vulnérabilité</strong><br>MFA fatigue / contrôle faible</div><div class="arrow">→</div>
+<div class="node"><strong>Impact</strong><br>accès privilégié & données</div>
+</div>
+<div class="flow">
+<div class="node"><strong>Mesure</strong><br>MFA résistant au phishing</div><div class="arrow">→</div>
+<div class="node"><strong>Gouvernance</strong><br>politique IAM / PAM</div><div class="arrow">→</div>
+<div class="node"><strong>Détection</strong><br>anomalies / logs</div><div class="arrow">→</div>
+<div class="node"><strong>Réponse</strong><br>contenir & récupérer</div>
+</div>
+
+<div class="callout"><strong>La compétence centrale :</strong> savoir traduire. Traduire une fonction métier en dépendances SI ; une vulnérabilité en scénario de risque ; un impact en priorité ; une priorité en contrôle, responsabilité et preuve.</div>
+</section>
+
+<section id="tp" class="lesson">
+<span class="source-badge">Mise en pratique · Uber for Business</span>
+<h2>▤ TP1 → TP2 : le cours devient une méthode de travail</h2>
+
+<h3>TP1 · Audit Flash & Gestion de Crise</h3>
+<p>Le TP1 mobilise une chaîne courte et très opérationnelle : <strong>identifier le stack → qualifier une vulnérabilité → contenir → remédier → organiser la crise → répartir les responsabilités → communiquer.</strong> Le scénario BOLA / IDOR sur une API montre qu'un utilisateur peut être correctement authentifié tout en accédant à un objet qui ne lui appartient pas si l'autorisation au niveau objet est absente ou insuffisante.</p>
+
+<div class="grid3">
+<div class="mini"><strong>OWASP</strong><p>Qualifie la famille de faiblesse : ici, Broken Object Level Authorization.</p></div>
+<div class="mini"><strong>CVSS</strong><p>Donne une lecture de sévérité technique de la vulnérabilité.</p></div>
+<div class="mini"><strong>GRC</strong><p>Traduit le constat en impact, décision, responsabilité, conformité et communication.</p></div>
+</div>
+
+<div class="callout warn"><strong>À ne pas confondre :</strong> « vulnérabilité critique » et « risque critique » ne sont pas synonymes. Le risque dépend de la réalité de l'actif, du contexte, de l'exposition et de l'impact métier.</div>
+
+<h3>TP2 · Cycle de vie d'un SI réel</h3>
+<p>Le TP2 élargit l'analyse à sept étapes : <strong>collecte → stockage → traitement → authentification et accès → échanges avec les tiers → utilisation métier → supervision et réponse.</strong> Pour chacune, on cherche actifs critiques, menaces, vulnérabilités potentielles et mesures de sécurité.</p>
+
+<table>
+<thead><tr><th>Étape</th><th>Question de risque</th><th>Exemple de contrôle</th></tr></thead>
+<tbody>
+<tr><td>Collecte</td><td>Collecte excessive ou données exposées ?</td><td>Minimisation, sécurité de l'entrée, règles de finalité.</td></tr>
+<tr><td>Stockage</td><td>Exfiltration ou indisponibilité ?</td><td>Accès, chiffrement, sauvegarde, résilience.</td></tr>
+<tr><td>Traitement</td><td>Altération des règles ou données ?</td><td>Contrôles d'intégrité, séparation, tests.</td></tr>
+<tr><td>Authentification</td><td>Phishing, fatigue MFA, vol de session ?</td><td>MFA résistant au phishing, IAM, surveillance.</td></tr>
+<tr><td>Privilèges</td><td>Élévation ou déplacement latéral ?</td><td>PAM, moindre privilège, revue des droits.</td></tr>
+<tr><td>API / tiers</td><td>BOLA ou compromission fournisseur ?</td><td>Autorisation objet, tests API, third-party risk.</td></tr>
+<tr><td>Supervision</td><td>Détection trop tardive ?</td><td>Logs, alertes, playbooks, exercices de réponse.</td></tr>
+</tbody>
+</table>
+
+<h3>Focus · Incident Uber de septembre 2022</h3>
+<p>Le cas officiel utilisé dans le TP illustre une chaîne très pédagogique : compte d'un prestataire compromis, mot de passe probablement récupéré après infection de son appareil personnel, demandes répétées de double authentification d'abord refusées, puis une demande finalement acceptée ; l'attaquant progresse ensuite vers d'autres comptes et des outils internes avec des permissions élevées.</p>
+
+<div class="callout case"><strong>Leçon exacte :</strong> l'incident ne prouve pas que « la MFA ne sert à rien ». Au contraire, elle a d'abord bloqué les tentatives. Le contournement repose sur le facteur humain, les permissions et la capacité de progression après accès initial.</div>
+
+<h3>NIST CSF 2.0 comme colonne vertébrale</h3>
+<div class="grid3">
+<div class="mini"><strong>GOVERN</strong><p>Politique, rôles, appétence au risque, fournisseurs.</p></div>
+<div class="mini"><strong>IDENTIFY</strong><p>Actifs, données, dépendances et risques.</p></div>
+<div class="mini"><strong>PROTECT</strong><p>IAM, MFA, moindre privilège, sécurité API et données.</p></div>
+<div class="mini"><strong>DETECT</strong><p>Logs, comportements anormaux, privilèges et accès API.</p></div>
+<div class="mini"><strong>RESPOND</strong><p>Confinement, investigation, communication et coordination.</p></div>
+<div class="mini"><strong>RECOVER</strong><p>Restauration, continuité et retour d'expérience.</p></div>
+</div>
+
+<div class="callout case"><strong>Ce que TP1 + TP2 démontrent ensemble :</strong> la gouvernance cyber consiste à relier une réalité technique à une réalité métier. On ne s'arrête jamais à « une faille existe » ; on demande <strong>quoi est exposé, quel scénario devient possible, quel impact en résulte, qui décide, quelle mesure réduit le risque et comment on vérifiera son efficacité.</strong></div>
+</section>
+
+<section id="glossaire" class="lesson">
+<span class="source-badge">Acronymes · Révision</span>
+<h2>◇ Glossaire essentiel</h2>
+<table>
+<thead><tr><th>Acronyme</th><th>Développement</th><th>À quoi ça sert ici</th></tr></thead>
+<tbody>
+<tr><td>SI</td><td>Système d'Information</td><td>Personnes, processus, applications, infrastructures, données et règles qui produisent l'information utile.</td></tr>
+<tr><td>MEF</td><td>Modèle d'Évaluation Fonctionnelle</td><td>Inventorier les fonctions et apprécier leur importance.</td></tr>
+<tr><td>BPMN</td><td>Business Process Model and Notation</td><td>Modéliser les étapes, décisions et responsabilités d'un processus.</td></tr>
+<tr><td>DIKW</td><td>Data · Information · Knowledge · Wisdom</td><td>Comprendre comment une donnée devient connaissance puis décision.</td></tr>
+<tr><td>DAMA-DMBOK</td><td>Data Management Body of Knowledge</td><td>Référentiel de management et de gouvernance des données.</td></tr>
+<tr><td>CVSS</td><td>Common Vulnerability Scoring System</td><td>Mesurer la sévérité technique d'une vulnérabilité.</td></tr>
+<tr><td>CIA</td><td>Confidentiality · Integrity · Availability</td><td>Trois propriétés fondamentales à protéger.</td></tr>
+<tr><td>PSSI</td><td>Politique de Sécurité des Systèmes d'Information</td><td>Formaliser principes, règles, responsabilités et exigences de sécurité.</td></tr>
+<tr><td>EBIOS RM</td><td>Expression des Besoins et Identification des Objectifs de Sécurité – Risk Manager</td><td>Méthode ANSSI d'analyse et de traitement du risque cyber.</td></tr>
+<tr><td>GRC</td><td>Governance · Risk · Compliance</td><td>Relier gouvernance, gestion des risques et conformité.</td></tr>
+<tr><td>IAM</td><td>Identity and Access Management</td><td>Gérer identités, authentification et habilitations.</td></tr>
+<tr><td>MFA</td><td>Multi-Factor Authentication</td><td>Combiner plusieurs facteurs d'authentification.</td></tr>
+<tr><td>PAM</td><td>Privileged Access Management</td><td>Contrôler, limiter et surveiller les accès privilégiés.</td></tr>
+<tr><td>API</td><td>Application Programming Interface</td><td>Permettre les échanges structurés entre applications ou services.</td></tr>
+<tr><td>BOLA</td><td>Broken Object Level Authorization</td><td>Défaut d'autorisation permettant d'accéder à un objet qui ne devrait pas être accessible.</td></tr>
+<tr><td>MOA / MOE</td><td>Maîtrise d'Ouvrage / Maîtrise d'Œuvre</td><td>Distinguer le porteur du besoin et le réalisateur de la solution.</td></tr>
+<tr><td>V&V</td><td>Verification & Validation</td><td>Vérifier la bonne construction et l'adéquation au besoin.</td></tr>
+<tr><td>PCA / PRA</td><td>Plan de Continuité / Plan de Reprise d'Activité</td><td>Maintenir les activités essentielles puis restaurer les capacités.</td></tr>
+<tr><td>COBIT</td><td>Framework de gouvernance et management de l'I&T</td><td>Structurer décisions, responsabilités, objectifs et contrôles.</td></tr>
+<tr><td>TOGAF</td><td>The Open Group Architecture Framework</td><td>Structurer l'architecture d'entreprise et son évolution.</td></tr>
+<tr><td>ITIL</td><td>Information Technology Infrastructure Library</td><td>Cadre de management des services IT.</td></tr>
+<tr><td>DORA</td><td>Digital Operational Resilience Act</td><td>Résilience opérationnelle numérique dans le secteur financier.</td></tr>
+<tr><td>RGPD</td><td>Règlement Général sur la Protection des Données</td><td>Cadre européen de protection des données personnelles.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="flashcards" class="lesson">
+<span class="source-badge">Révision active</span>
+<h2>◇ Flashcards</h2>
+<details><summary>Le fil directeur du cours en une ligne ?</summary><p>Stratégie → métier → processus → data → SI → architecture → cybersécurité → risques → conformité → gouvernance.</p></details>
+<details><summary>Pourquoi commencer par le métier avant la cyber ?</summary><p>Parce qu'on ne peut pas juger la criticité d'un composant ou d'une donnée sans savoir quelle fonction et quelle valeur il supporte.</p></details>
+<details><summary>À quoi sert le MEF ?</summary><p>À inventorier les fonctions, voir si elles sont réalisées et apprécier leur importance avant d'étudier les moyens techniques.</p></details>
+<details><summary>Open Data = donnée sans gouvernance ?</summary><p>Non. Une donnée ouverte reste gouvernée : il faut décider sa qualité, sa publication, sa licence, sa mise à jour et ce qui peut réellement être rendu public.</p></details>
+<details><summary>DIKW ?</summary><p>Data → Information → Knowledge → Wisdom.</p></details>
+<details><summary>DAMA-DMBOK vs ISO 27001 ?</summary><p>DAMA structure le management des données ; ISO 27001 structure le management de la sécurité de l'information. Ils sont complémentaires.</p></details>
+<details><summary>CVSS = risque métier ?</summary><p>Non. CVSS exprime une sévérité technique ; le risque dépend aussi de l'actif, de l'exposition, de la vraisemblance et de l'impact.</p></details>
+<details><summary>Les trois familles de métriques CVSS vues en cours ?</summary><p>Base · Temporal · Environmental.</p></details>
+<details><summary>CIA ?</summary><p>Confidentialité · Intégrité · Disponibilité.</p></details>
+<details><summary>Rôle de la PSSI ?</summary><p>Traduire la stratégie de sécurité en principes, règles, responsabilités et exigences vérifiables.</p></details>
+<details><summary>5 ateliers EBIOS RM ?</summary><p>Cadrage & socle · sources de risque · scénarios stratégiques · scénarios opérationnels · traitement du risque.</p></details>
+<details><summary>Pourquoi Cambridge Analytica relève de la gouvernance des données ?</summary><p>Parce que le problème porte aussi sur la finalité, le consentement, les usages, les partages et la responsabilité — pas uniquement sur le chiffrement.</p></details>
+<details><summary>IA générative vs IA agentique ?</summary><p>La première produit principalement du contenu ; la seconde poursuit un objectif en orchestrant plusieurs actions et nécessite donc davantage de contrôle des permissions et de traçabilité.</p></details>
+<details><summary>Security by Design ?</summary><p>Intégrer les exigences de sécurité dès la conception puis les vérifier pendant tout le cycle de vie.</p></details>
+<details><summary>Processus métier vs algorithme ?</summary><p>Le processus décrit le parcours et les responsabilités de bout en bout ; l'algorithme est un mécanisme de calcul à l'intérieur de ce processus.</p></details>
+<details><summary>Pourquoi cartographier le SI avant les risques ?</summary><p>Pour connaître les actifs, flux et dépendances que l'on cherche à protéger et éviter d'analyser un système imaginaire.</p></details>
+<details><summary>COBIT / TOGAF / ITIL en trois verbes ?</summary><p>Gouverner · Architecturer · Fournir / améliorer les services.</p></details>
+<details><summary>Fatigue MFA ?</summary><p>Multiplier les demandes MFA jusqu'à provoquer une validation humaine frauduleuse.</p></details>
+<details><summary>BOLA ?</summary><p>Un défaut d'autorisation au niveau objet : l'utilisateur est authentifié mais peut accéder à une ressource qui ne lui appartient pas.</p></details>
+<details><summary>Six fonctions NIST CSF 2.0 ?</summary><p>GOVERN · IDENTIFY · PROTECT · DETECT · RESPOND · RECOVER.</p></details>
+</section>
+
+<section id="quiz" class="lesson" data-quiz>
+<span class="source-badge">Entraînement · 15 questions</span>
+<h2>☑ QCM</h2>
+
+<div class="quiz-card" data-answer="B"><h3>1. Quel enchaînement reflète le mieux le cours ?</h3><label class="option"><input type="radio" name="q1" value="A"> Firewall → IA → budget → données</label><label class="option"><input type="radio" name="q1" value="B"> Métier → Data/SI → Cyber → Risque → Gouvernance</label><label class="option"><input type="radio" name="q1" value="C"> CVSS → BPMN → Internet</label><div class="feedback">Réponse : B — Le cours apprend à relier les niveaux plutôt qu'à empiler des technologies.</div></div>
+
+<div class="quiz-card" data-answer="A"><h3>2. Le MEF sert d'abord à...</h3><label class="option"><input type="radio" name="q2" value="A"> Identifier et prioriser les fonctions du système</label><label class="option"><input type="radio" name="q2" value="B"> Scanner les vulnérabilités</label><label class="option"><input type="radio" name="q2" value="C"> Chiffrer les bases</label><div class="feedback">Réponse : A — Il donne une lecture fonctionnelle avant la lecture technique.</div></div>
+
+<div class="quiz-card" data-answer="C"><h3>3. CVSS mesure principalement...</h3><label class="option"><input type="radio" name="q3" value="A"> Le risque financier</label><label class="option"><input type="radio" name="q3" value="B"> La conformité RGPD</label><label class="option"><input type="radio" name="q3" value="C"> La sévérité technique d'une vulnérabilité</label><div class="feedback">Réponse : C — Le contexte métier reste nécessaire pour parler de risque.</div></div>
+
+<div class="quiz-card" data-answer="A"><h3>4. DIKW commence par...</h3><label class="option"><input type="radio" name="q4" value="A"> Data</label><label class="option"><input type="radio" name="q4" value="B"> Decision</label><label class="option"><input type="radio" name="q4" value="C"> Wisdom</label><div class="feedback">Réponse : A — Data → Information → Knowledge → Wisdom.</div></div>
+
+<div class="quiz-card" data-answer="B"><h3>5. Une exposition de données de trajet touche d'abord...</h3><label class="option"><input type="radio" name="q5" value="A"> La disponibilité</label><label class="option"><input type="radio" name="q5" value="B"> La confidentialité</label><label class="option"><input type="radio" name="q5" value="C"> La performance CPU</label><div class="feedback">Réponse : B — L'accès non autorisé à la donnée est une atteinte à la confidentialité.</div></div>
+
+<div class="quiz-card" data-answer="C"><h3>6. La PSSI sert principalement à...</h3><label class="option"><input type="radio" name="q6" value="A"> Dessiner l'architecture réseau</label><label class="option"><input type="radio" name="q6" value="B"> Calculer CVSS</label><label class="option"><input type="radio" name="q6" value="C"> Formaliser la politique de sécurité</label><div class="feedback">Réponse : C — Elle traduit la gouvernance en principes, règles et responsabilités.</div></div>
+
+<div class="quiz-card" data-answer="B"><h3>7. Dans EBIOS RM, les scénarios opérationnels cherchent surtout à...</h3><label class="option"><input type="radio" name="q7" value="A"> Définir le budget annuel</label><label class="option"><input type="radio" name="q7" value="B"> Décrire comment un scénario d'attaque pourrait concrètement se dérouler</label><label class="option"><input type="radio" name="q7" value="C"> Rédiger la charte graphique</label><div class="feedback">Réponse : B — Ils détaillent les chemins et actions permettant d'atteindre l'objectif de risque.</div></div>
+
+<div class="quiz-card" data-answer="A"><h3>8. Quel framework est surtout associé à l'architecture d'entreprise ?</h3><label class="option"><input type="radio" name="q8" value="A"> TOGAF</label><label class="option"><input type="radio" name="q8" value="B"> ITIL</label><label class="option"><input type="radio" name="q8" value="C"> CVSS</label><div class="feedback">Réponse : A — TOGAF structure l'architecture d'entreprise.</div></div>
+
+<div class="quiz-card" data-answer="B"><h3>9. Security by Design signifie...</h3><label class="option"><input type="radio" name="q9" value="A"> Tester uniquement après mise en production</label><label class="option"><input type="radio" name="q9" value="B"> Intégrer la sécurité dès la conception</label><label class="option"><input type="radio" name="q9" value="C"> Acheter un SIEM</label><div class="feedback">Réponse : B — Puis vérifier les exigences pendant le cycle de vie.</div></div>
+
+<div class="quiz-card" data-answer="C"><h3>10. La cartographie SI aide d'abord à...</h3><label class="option"><input type="radio" name="q10" value="A"> Remplacer l'analyse de risques</label><label class="option"><input type="radio" name="q10" value="B"> Écrire une PSSI automatiquement</label><label class="option"><input type="radio" name="q10" value="C"> Comprendre actifs, flux et dépendances</label><div class="feedback">Réponse : C — Elle donne le terrain réel de l'analyse.</div></div>
+
+<div class="quiz-card" data-answer="A"><h3>11. L'incident Uber 2022 illustre notamment...</h3><label class="option"><input type="radio" name="q11" value="A"> La fatigue MFA et la progression après accès initial</label><label class="option"><input type="radio" name="q11" value="B"> Un défaut de PCA uniquement</label><label class="option"><input type="radio" name="q11" value="C"> Une panne électrique</label><div class="feedback">Réponse : A — Les demandes MFA ont d'abord été refusées avant qu'une validation permette la progression.</div></div>
+
+<div class="quiz-card" data-answer="B"><h3>12. BOLA concerne principalement...</h3><label class="option"><input type="radio" name="q12" value="A"> Le chiffrement disque</label><label class="option"><input type="radio" name="q12" value="B"> L'autorisation au niveau des objets d'une API</label><label class="option"><input type="radio" name="q12" value="C"> Le PRA</label><div class="feedback">Réponse : B — Un utilisateur authentifié ne doit pas accéder à l'objet d'un autre tenant.</div></div>
+
+<div class="quiz-card" data-answer="C"><h3>13. Parmi ces fonctions, laquelle appartient au NIST CSF 2.0 ?</h3><label class="option"><input type="radio" name="q13" value="A"> CALCULATE</label><label class="option"><input type="radio" name="q13" value="B"> PURCHASE</label><label class="option"><input type="radio" name="q13" value="C"> GOVERN</label><div class="feedback">Réponse : C — GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER.</div></div>
+
+<div class="quiz-card" data-answer="A"><h3>14. Le rôle GRC face à une vulnérabilité consiste notamment à...</h3><label class="option"><input type="radio" name="q14" value="A"> Relier le constat technique à l'impact, au risque et à la décision</label><label class="option"><input type="radio" name="q14" value="B"> Remplacer le pentester</label><label class="option"><input type="radio" name="q14" value="C"> Administrer tous les firewalls</label><div class="feedback">Réponse : A — C'est précisément le changement de niveau travaillé dans les TP.</div></div>
+
+<div class="quiz-card" data-answer="B"><h3>15. Pourquoi un algorithme ne décrit-il pas à lui seul un processus métier ?</h3><label class="option"><input type="radio" name="q15" value="A"> Parce qu'un algorithme ne traite jamais de données</label><label class="option"><input type="radio" name="q15" value="B"> Parce que le processus inclut aussi acteurs, étapes, décisions, échanges et responsabilités</label><label class="option"><input type="radio" name="q15" value="C"> Parce que BPMN est un langage de programmation</label><div class="feedback">Réponse : B — L'algorithme peut être une brique du processus, pas le processus complet.</div></div>
+
+<div class="actions"><button class="btn primary check">Corriger</button><button class="btn reset">Réinitialiser</button></div>
+<div class="score"></div>
+</section>
+
+<section id="memo" class="lesson">
+<span class="source-badge">Révision express</span>
+<h2>◴ Mémo express</h2>
+<div class="grid2">
+<div>
+<h3>Je dois savoir expliquer</h3>
+<ul>
+<li>Pourquoi gouvernance, SI, data et cybersécurité sont un même système de décision.</li>
+<li>Le rôle du MEF et le passage fonction → données → composants.</li>
+<li>DIKW et les grands enjeux DAMA-DMBOK.</li>
+<li>Pourquoi CVSS n'est pas un score de risque métier.</li>
+<li>CIA, PSSI et les 5 ateliers EBIOS RM.</li>
+<li>Security / Privacy by Design et cycle de vie.</li>
+<li>Processus métier vs algorithme.</li>
+<li>COBIT vs TOGAF vs ITIL.</li>
+<li>Pourquoi l'automatisation GRC ne remplace pas la gouvernance.</li>
+</ul>
+</div>
+<div>
+<h3>Je dois savoir appliquer</h3>
+<ul>
+<li>Partir d'une fonction métier et retrouver ses données et dépendances SI.</li>
+<li>Cartographier simplement actifs, flux, interfaces et tiers.</li>
+<li>Distinguer menace, vulnérabilité, impact et risque.</li>
+<li>Passer Actif → Menace → Vulnérabilité → Impact → Mesure.</li>
+<li>Relier une mesure à gouvernance / protection / détection / réponse / reprise.</li>
+<li>Expliquer fatigue MFA et BOLA sans confondre technique et risque.</li>
+<li>Transformer un constat technique en décision GRC défendable.</li>
+</ul>
+</div>
+</div>
+<div class="callout case"><strong>Phrase de synthèse :</strong> la gouvernance cyber ne consiste pas à accumuler des contrôles. Elle consiste à comprendre le métier et son SI, connaître les données et dépendances, analyser des scénarios de risque, décider des protections adaptées puis vérifier qu'elles fonctionnent pendant tout le cycle de vie.</div>
+</section>
+
+<section class="lesson">
+<span class="source-badge">Sources & transparence</span>
+<h2>◇ Périmètre de cette page</h2>
+<p>Cette page synthétise les <strong>quatre séances actuellement disponibles</strong> du cours de M. YOROBI et les applications Uber travaillées en TP. Les thèmes secondaires des slides sont conservés lorsqu'ils éclairent le raisonnement, mais ils ne prennent pas la même place que les notions centrales utilisées dans les exercices et les TP.</p>
+<div class="callout warn"><strong>Pas de faux contenu officiel.</strong> Les blocs « 📚 Cours du professeur » restent fondés sur les supports. Les blocs « 💡 Explication » structurent et approfondissent la compréhension ; les blocs Uber sont des applications pédagogiques. Lorsqu'un schéma illustre un système sans documenter l'architecture interne réelle, LUMEN conserve une représentation fonctionnelle et n'invente pas de composants.</div>
+<p class="small">Les exemples Airbnb, Netflix, IA, crypto, blockchain ou santé sont présents dans les supports comme terrains d'illustration ; LUMEN privilégie Uber lorsque l'objectif est de préparer les TP et de consolider la chaîne métier → SI → data → cyber → risque → gouvernance.</p>
+</section>
+
+<footer class="footer">◈ LUMEN · Fondamentaux de la gouvernance des données et cybersécurité · M. YOROBI · Support étudiant indépendant</footer>
+</main>
+</div>
+</div>
+</body>
+</html>
